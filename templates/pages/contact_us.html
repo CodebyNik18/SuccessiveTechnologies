@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — SuccessiveTechnologies</title>
+  <meta name="description"
+    content="Tell SuccessiveTechnologies what you're trying to build or fix. We reply within one business day with a clear next step.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/pages/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+  {% include "header.html" %}
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow"><span class="eyebrow-line"></span>Contact</p>
+        <h1 class="page-title">Tell us what you're trying to build or fix.</h1>
+        <p class="page-lead">Share a few details and a senior engineer will reply within one business day with
+          questions, a suggested approach, or an honest "we're not the right fit."</p>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="container contact-grid">
+
+        <form class="contact-form" id="form" action="#" method="post" novalidate data-contact-form>
+          <div class="form-head">
+            <h2>Start a conversation</h2>
+            <p>Fields marked optional can be skipped. The more context you give, the more useful our first reply will
+              be.</p>
+            <p class="form-note mono" style="margin-top:.8rem">Demo form — connect a backend to enable real submissions.
+            </p>
+          </div>
+
+          <div class="row two">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <span class="error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="field">
+              <label for="company">Company <span class="opt">(optional)</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend class="fieldset-label">What do you need help with?</legend>
+            <div class="pills">
+              <label class="pill"><input type="checkbox" name="service" value="product"><span>Product
+                  engineering</span></label>
+              <label class="pill"><input type="checkbox" name="service" value="ai"><span>AI &amp;
+                  automation</span></label>
+              <label class="pill"><input type="checkbox" name="service" value="cloud"><span>Cloud &amp;
+                  DevOps</span></label>
+              <label class="pill"><input type="checkbox" name="service"
+                  value="security"><span>Cybersecurity</span></label>
+              <label class="pill"><input type="checkbox" name="service" value="data"><span>Data &amp;
+                  analytics</span></label>
+              <label class="pill"><input type="checkbox" name="service" value="consulting"><span>Consulting &amp;
+                  modernization</span></label>
+              <label class="pill"><input type="checkbox" name="service" value="unsure"><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+
+          <div class="row two">
+            <div class="field">
+              <label for="timeline">Timeline <span class="opt">(optional)</span></label>
+              <select id="timeline" name="timeline">
+                <option value="">Select</option>
+                <option>As soon as possible</option>
+                <option>Within 1–3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="budget">Budget range <span class="opt">(optional)</span></label>
+              <select id="budget" name="budget">
+                <option value="">Select</option>
+                <option>Not decided</option>
+                <option>Under $10k</option>
+                <option>$10k – $50k</option>
+                <option>$50k – $150k</option>
+                <option>$150k+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">What are you trying to achieve?</label>
+            <textarea id="message" name="message" rows="5" required minlength="20"
+              placeholder="The problem, who it affects, and what you've tried so far."></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1"
+                autocomplete="off"></label></div>
+
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary">Send message <span aria-hidden="true">→</span></button>
+            <small>We use your details only to reply to this enquiry. No newsletters, no sharing.</small>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="aside" aria-label="Other ways to reach us">
+          <div>
+            <h2>Reach us directly</h2>
+            <ul class="channels">
+              <li><span class="mono">General enquiries</span><a href="mailto:hello@example.com"
+                  data-placeholder-contact>hello@example.com</a></li>
+              <li><span class="mono">New projects</span><a href="mailto:projects@example.com"
+                  data-placeholder-contact>projects@example.com</a></li>
+              <li><span class="mono">Phone</span><a href="tel:+910000000000" data-placeholder-contact>+91 00000
+                  00000</a></li>
+              <li><span class="mono">Hours</span><span style="color:var(--text-2)">Mon–Fri, 9:30–18:30 IST</span></li>
+            </ul>
+          </div>
+          <div>
+            <h2>What happens next</h2>
+            <ol class="steps">
+              <li>
+                <h3>We read it properly</h3>
+                <p>A senior engineer reviews your message, not a sales script.</p>
+              </li>
+              <li>
+                <h3>Reply within one business day</h3>
+                <p>Clarifying questions, or a suggested approach if the picture is clear.</p>
+              </li>
+              <li>
+                <h3>A short discovery call</h3>
+                <p>30 minutes to align on goals, constraints, and next steps.</p>
+              </li>
+              <li>
+                <h3>A written proposal</h3>
+                <p>Scope, architecture direction, timeline, and cost, in plain language.</p>
+              </li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Before you write</p>
+          <h2 id="faq-h">Common questions.</h2>
+        </div>
+        <div>
+          <details>
+            <summary>Do I need a finished brief?</summary>
+            <p>No. Many projects start as a rough problem statement. We'll help you shape scope, priorities, and a
+              realistic first release.</p>
+          </details>
+          <details>
+            <summary>Will you sign an NDA?</summary>
+            <p>Yes. If your idea is sensitive, mention it in your message and we'll send a mutual NDA before you share
+              details.</p>
+          </details>
+          <details>
+            <summary>What size of project do you take on?</summary>
+            <p>From focused engagements, such as an architecture review or an integration, to long-running product
+              builds. If we're not the right fit, we'll say so and point you elsewhere.</p>
+          </details>
+          <details>
+            <summary>Can you work with our existing team and systems?</summary>
+            <p>Yes. We regularly join existing codebases and teams, and we document as we go so knowledge stays with
+              you.</p>
+          </details>
+          <details>
+            <summary>How soon can work start?</summary>
+            <p>That depends on scope and current capacity. We'll give you a realistic start date in our first reply.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include "footer.html" %}
+  <script src="{% static 'js/pages/contact.js' %}"></script>
+  <script src="{% static 'js/site.js' %}"></script>
+</body>
+
+</html>

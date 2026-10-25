@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — SuccessiveTechnologies</title>
+  <meta name="description"
+    content="SuccessiveTechnologies is an engineering partner for ambitious businesses. Learn how we think, how we work, and what we value.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{% static 'css/pages/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+  {% include "header.html" %}
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>About us</p>
+          <h1>Engineers who start with your <em>problem.</em></h1>
+          <p class="lead">SuccessiveTechnologies is an engineering partner for ambitious businesses. We build software,
+            AI systems, cloud infrastructure, and data platforms, and we stay involved after launch.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Talk to our team <span aria-hidden="true">→</span></a>
+            <a href="#approach" class="btn btn-ghost">See how we work</a>
+          </div>
+        </div>
+        <figure class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 560 560" class="hero-svg">
+            <defs>
+              <radialGradient id="core" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#63D5E8" stop-opacity=".55" />
+                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="beam" x1="0" x2="1">
+                <stop offset="0" stop-color="#638BFF" stop-opacity="0" />
+                <stop offset=".5" stop-color="#63D5E8" />
+                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <g class="hv-grid">
+              <path d="M40 280H520M280 40V520" />
+              <circle cx="280" cy="280" r="240" />
+              <circle cx="280" cy="280" r="180" stroke-dasharray="2 6" />
+            </g>
+            <g class="hv-orbit o1">
+              <ellipse cx="280" cy="280" rx="210" ry="78" />
+              <circle cx="490" cy="280" r="3.5" class="hv-dot-c" />
+            </g>
+            <g class="hv-orbit o2">
+              <ellipse cx="280" cy="280" rx="210" ry="78" transform="rotate(60 280 280)" />
+              <circle cx="385" cy="462" r="3" class="hv-dot-b" />
+            </g>
+            <g class="hv-orbit o3">
+              <ellipse cx="280" cy="280" rx="210" ry="78" transform="rotate(-60 280 280)" />
+              <circle cx="175" cy="462" r="3" class="hv-dot-b" />
+            </g>
+            <g class="hv-stack">
+              <path class="layer l3" d="M280 318l92-46-92-46-92 46z" />
+              <path class="layer l2" d="M280 290l92-46-92-46-92 46z" />
+              <path class="layer l1" d="M280 262l92-46-92-46-92 46z" />
+              <path class="hv-edge" d="M188 216v56M372 216v56M280 262v56" />
+            </g>
+            <circle cx="280" cy="216" r="70" fill="url(#core)" />
+            <g class="hv-net">
+              <path
+                d="M280 216L120 140M280 216L452 128M280 216L470 380M280 318L110 410M120 140L70 260M452 128L520 230M110 410L250 480" />
+            </g>
+            <g class="hv-nodes">
+              <circle cx="120" cy="140" r="4" />
+              <circle cx="452" cy="128" r="4" />
+              <circle cx="470" cy="380" r="4" />
+              <circle cx="110" cy="410" r="4" />
+              <circle cx="70" cy="260" r="2.5" />
+              <circle cx="520" cy="230" r="2.5" />
+              <circle cx="250" cy="480" r="2.5" />
+              <circle cx="280" cy="216" r="5" class="hv-core-dot" />
+            </g>
+            <rect class="hv-beam" x="40" y="279.5" width="160" height="1" fill="url(#beam)" />
+            <g class="hv-label"><text x="128" y="132">design</text><text x="380" y="118">build</text><text x="400"
+                y="404">operate</text><text x="40" y="430">improve</text></g>
+          </svg>
+          <figcaption class="hv-caption mono"><span class="pulse"></span>System map: illustrative</figcaption>
+        </figure>
+      </div>
+      <a href="#mission" class="scroll-cue" aria-label="Scroll to next section"><span></span></a>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section alt" id="mission">
+      <div class="container mission">
+        <p class="mission-quote">Good technology is not the goal. <span>Better outcomes for the business are.</span></p>
+        <div class="mission-text">
+          <p>Most technology projects fail for ordinary reasons: unclear goals, rushed architecture, and no plan for
+            what happens after launch. We built our practice around avoiding those mistakes.</p>
+          <p>We begin with your outcomes and constraints, choose technology to fit them, and design systems that can
+            change as your business does.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section" id="principles">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>What we believe</p>
+            <h2 class="h2">More than implementation. A technology partner.</h2>
+          </div>
+          <p class="lead">Four principles shape every decision, from the first workshop to the last release.</p>
+        </div>
+        <ol class="principle-list">
+          <li><span class="mono">i.</span>
+            <h3>Business-first problem solving</h3>
+            <p>We ask what success looks like before we talk about frameworks. Technology is chosen to serve outcomes
+              and constraints, not the other way around.</p>
+          </li>
+          <li><span class="mono">ii.</span>
+            <h3>Thoughtful technical architecture</h3>
+            <p>Decisions made today should keep options open tomorrow. We design for change, document the trade-offs,
+              and avoid needless complexity.</p>
+          </li>
+          <li><span class="mono">iii.</span>
+            <h3>Quality-focused engineering</h3>
+            <p>Testing, code review, and documentation are part of the work, not extras. You should be able to run,
+              extend, and hand over what we build.</p>
+          </li>
+          <li><span class="mono">iv.</span>
+            <h3>Continuous improvement</h3>
+            <p>Software is never finished. We measure how systems perform in the real world, learn from it, and keep
+              refining.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section alt" id="approach">
+      <div class="container">
+        <div class="head">
+          <p class="eyebrow"><span class="eyebrow-line"></span>How we work</p>
+          <h2 class="h2">Clear thinking. Disciplined engineering.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="stage"><span class="mono">01</span>
+            <h3>Discover</h3>
+            <p>Understand business goals, users, constraints, and technical requirements.</p>
+          </li>
+          <li class="stage"><span class="mono">02</span>
+            <h3>Architect</h3>
+            <p>Define the solution, technical architecture, and implementation plan.</p>
+          </li>
+          <li class="stage"><span class="mono">03</span>
+            <h3>Engineer</h3>
+            <p>Build, integrate, test, and validate the solution.</p>
+          </li>
+          <li class="stage"><span class="mono">04</span>
+            <h3>Evolve</h3>
+            <p>Deploy, monitor, maintain, and improve as business needs change.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COMMITMENTS -->
+    <section class="section" id="commitments">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Working with us</p>
+            <h2 class="h2">What you can expect from us.</h2>
+          </div>
+          <p class="lead">Our standards for how a project runs, whatever its size.</p>
+        </div>
+        <ul class="commit-grid">
+          <li class="commit">
+            <h3>Plain-language communication</h3>
+            <p>Updates you can read without a glossary, and trade-offs explained before they become surprises.</p>
+          </li>
+          <li class="commit">
+            <h3>Honest scoping</h3>
+            <p>If something is risky, expensive, or unnecessary, we say so early and suggest a simpler path.</p>
+          </li>
+          <li class="commit">
+            <h3>Security by default</h3>
+            <p>Access control, dependency hygiene, and data handling are considered from day one, not bolted on.</p>
+          </li>
+          <li class="commit">
+            <h3>Visible progress</h3>
+            <p>Regular demos of working software so you can steer the project while it is still easy to change.</p>
+          </li>
+          <li class="commit">
+            <h3>You own what we build</h3>
+            <p>Clean repositories, documentation, and a proper handover. No lock-in by obscurity.</p>
+          </li>
+          <li class="commit">
+            <h3>Support after launch</h3>
+            <p>Monitoring, maintenance, and improvement plans so the system keeps earning its place.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section alt" id="expertise">
+      <div class="container expertise">
+        <div class="sticky">
+          <p class="eyebrow"><span class="eyebrow-line"></span>Expertise</p>
+          <h2 class="h2">One team across the full stack.</h2>
+          <p class="lead" style="margin-top:1.25rem">Product, AI, infrastructure, security, and data work together in
+            one engineering team, so nothing gets lost between vendors.</p>
+        </div>
+        <ul class="exp-list">
+          <li>
+            <h3>Product engineering</h3>
+            <ul class="chips">
+              <li>Web apps</li>
+              <li>Mobile</li>
+              <li>APIs</li>
+              <li>E-commerce</li>
+              <li>Integrations</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Applied AI</h3>
+            <ul class="chips">
+              <li>LLM integration</li>
+              <li>Knowledge assistants</li>
+              <li>Document processing</li>
+              <li>Workflow automation</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="chips">
+              <li>AWS</li>
+              <li>Infrastructure as code</li>
+              <li>CI/CD</li>
+              <li>Observability</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Security</h3>
+            <ul class="chips">
+              <li>Secure development</li>
+              <li>Assessments</li>
+              <li>Identity controls</li>
+              <li>Vulnerability management</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Data &amp; analytics</h3>
+            <ul class="chips">
+              <li>Pipelines</li>
+              <li>Dashboards</li>
+              <li>BI</li>
+              <li>System integrations</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Consulting</h3>
+            <ul class="chips">
+              <li>Technical strategy</li>
+              <li>Legacy modernization</li>
+              <li>Architecture review</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEAM (placeholder) -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Leadership</p>
+            <h2 class="h2">The people you will work with.</h2>
+          </div>
+          <p class="lead"><span class="tag">Placeholder</span><br><br>Replace these cards with your real team: photo,
+            name, role, and a one-line bio.</p>
+        </div>
+        <div class="team-grid">
+          <article class="member">
+            <div class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48">
+                <circle cx="24" cy="17" r="8" />
+                <path d="M8 42c2-9 9-14 16-14s14 5 16 14" />
+              </svg></div>
+            <div>
+              <h3>Founder name</h3>
+              <p>Founder &amp; CEO</p>
+            </div>
+          </article>
+          <article class="member">
+            <div class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48">
+                <circle cx="24" cy="17" r="8" />
+                <path d="M8 42c2-9 9-14 16-14s14 5 16 14" />
+              </svg></div>
+            <div>
+              <h3>Name</h3>
+              <p>Head of Engineering</p>
+            </div>
+          </article>
+          <article class="member">
+            <div class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48">
+                <circle cx="24" cy="17" r="8" />
+                <path d="M8 42c2-9 9-14 16-14s14 5 16 14" />
+              </svg></div>
+            <div>
+              <h3>Name</h3>
+              <p>Head of Delivery</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta" id="start">
+      <div class="container">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
+          <h2>Have a complex challenge? Let's work through it.</h2>
+        </div>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Start a conversation <span aria-hidden="true">→</span></a>
+          <a href="index.html#services" class="btn btn-ghost">Explore services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include "footer.html" %}
+  <script src="{% static 'js/pages/about.js' %}"></script>
+  <script src="{% static 'js/site.js' %}"></script>
+</body>
+
+</html>

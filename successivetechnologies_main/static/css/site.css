@@ -1,0 +1,508 @@
+/* =========================================================
+   SuccessiveTechnologies — shared header + footer styles
+   Link in <head>:  <link rel="stylesheet" href="shared/site.css">
+   Safe to load alongside your page CSS (same tokens/classes).
+   ========================================================= */
+
+:root {
+    --bg: #080B12;
+    --bg-2: #0D111B;
+    --surface: #111827;
+    --text: #F5F7FA;
+    --text-2: #A1AAB8;
+    --text-3: #6B7486;
+    --blue: #638BFF;
+    --cyan: #63D5E8;
+    --line: rgba(148, 163, 196, 0.14);
+    --line-strong: rgba(148, 163, 196, 0.26);
+    --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --container: 1280px;
+    --gutter: clamp(1.25rem, .8rem + 2vw, 2.5rem);
+    --radius: 4px;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+    --header-h: 68px;
+}
+
+/* ---- Helpers the header/footer rely on ---- */
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+.mono {
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .04em;
+    color: var(--text-3);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-2);
+}
+
+.eyebrow-line {
+    width: 28px;
+    height: 1px;
+    background: var(--blue);
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 100;
+    background: var(--text);
+    color: var(--bg);
+    padding: .5rem 1rem;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    justify-content: center;
+    height: 48px;
+    padding: 0 1.4rem;
+    border-radius: var(--radius);
+    font-size: .925rem;
+    font-weight: 500;
+    letter-spacing: -.005em;
+    white-space: nowrap;
+    transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+}
+
+.btn span {
+    transition: transform .25s var(--ease);
+}
+
+.btn:hover span {
+    transform: translateX(3px);
+}
+
+.btn-primary {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    background: var(--cyan);
+}
+
+.btn-sm {
+    height: 38px;
+    padding: 0 1rem;
+    font-size: .85rem;
+}
+
+.link-arrow {
+    display: inline-flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--text);
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: .25rem;
+    transition: border-color .25s, gap .25s var(--ease);
+}
+
+.link-arrow:hover {
+    border-color: var(--cyan);
+    gap: .8rem;
+}
+
+/* ---- HEADER ----
+   Blur lives on ::before: a backdrop-filter on the header itself would make
+   the fixed mobile menu size to the 68px header instead of the viewport. */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    height: var(--header-h);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s var(--ease);
+}
+
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+    transition: background .3s var(--ease), backdrop-filter .3s, -webkit-backdrop-filter .3s;
+}
+
+.site-header.is-scrolled,
+.nav-open .site-header {
+    border-color: var(--line);
+}
+
+.site-header.is-scrolled::before,
+.nav-open .site-header::before {
+    background: rgba(8, 11, 18, .82);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-weight: 600;
+    letter-spacing: .22em;
+    font-size: .9rem;
+    color: var(--text);
+}
+
+.wordmark-mark {
+    width: 20px;
+    height: 20px;
+    color: var(--cyan);
+}
+
+.primary-nav {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .5rem .8rem;
+    font-size: .875rem;
+    color: var(--text-2);
+    transition: color .2s;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"],
+.nav-trigger[aria-expanded="true"] {
+    color: var(--text);
+}
+
+.nav-trigger svg {
+    width: 12px;
+    transition: transform .25s var(--ease);
+}
+
+.nav-trigger[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.nav-item.has-menu {
+    position: relative;
+}
+
+.nav-cta-mobile {
+    display: none;
+}
+
+.mega {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: -1rem;
+    width: min(680px, 80vw);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+    background: var(--bg-2);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6);
+    animation: drop .25s var(--ease);
+}
+
+.mega[hidden] {
+    display: none;
+}
+
+.mega p {
+    margin: 0;
+}
+
+.mega-lead {
+    margin: .8rem 0 1.4rem !important;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    letter-spacing: -.01em;
+}
+
+.mega-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mega-list a {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: .55rem 0;
+    font-size: .9rem;
+    color: var(--text-2);
+    border-bottom: 1px solid var(--line);
+    transition: color .2s, padding .25s var(--ease);
+}
+
+.mega-list li:last-child a {
+    border-bottom: 0;
+}
+
+.mega-list a:hover {
+    color: var(--text);
+    padding-left: .3rem;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+}
+
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: auto;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+.menu-toggle span {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 1.5px;
+    background: var(--text);
+    transition: transform .3s var(--ease);
+}
+
+.menu-toggle span:first-child {
+    top: 16px;
+}
+
+.menu-toggle span:last-child {
+    top: 23px;
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+@media (max-width: 960px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .primary-nav {
+        position: fixed;
+        inset: var(--header-h) 0 0;
+        margin: 0;
+        background: var(--bg);
+        padding: 1.5rem var(--gutter);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s var(--ease), visibility .3s;
+    }
+
+    .nav-open .primary-nav {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-open {
+        overflow: hidden;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 1.1rem 0;
+        font-size: 1.35rem;
+        color: var(--text);
+        border-bottom: 1px solid var(--line);
+        letter-spacing: -.02em;
+    }
+
+    .nav-trigger {
+        background: none;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        font: inherit;
+        font-size: 1.35rem;
+        cursor: pointer;
+    }
+
+    .mega {
+        position: static;
+        width: auto;
+        grid-template-columns: 1fr;
+        padding: .5rem 0 1rem;
+        background: none;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .mega-intro {
+        display: none;
+    }
+
+    .mega-list a {
+        padding: .85rem 0;
+        font-size: 1rem;
+    }
+
+    .nav-cta-mobile {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .nav-cta-mobile .btn {
+        width: 100%;
+    }
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 4.5rem;
+    font-size: .9rem;
+    color: var(--text);
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 4rem;
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+
+.footer-brand p {
+    color: var(--text-2);
+    margin: 1.25rem 0 0;
+    max-width: 34ch;
+}
+
+.footer-h {
+    margin: 0 0 1rem;
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--text-3);
+}
+
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer ul a {
+    color: var(--text-2);
+    transition: color .2s;
+    display: inline-block;
+    padding: .25rem 0;
+}
+
+.site-footer ul a:hover {
+    color: var(--text);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-block: 1.75rem;
+    border-top: 1px solid var(--line);
+    color: var(--text-3);
+    font-size: .8rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-header *,
+    .site-header::before,
+    .site-footer * {
+        transition-duration: .001ms !important;
+        animation-duration: .001ms !important;
+    }
+}

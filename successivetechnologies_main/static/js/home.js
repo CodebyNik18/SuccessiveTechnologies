@@ -1,49 +1,9 @@
-/* SuccessiveTechnologies — homepage interactions (vanilla JS, no dependencies) */
 (function () {
     "use strict";
 
     const root = document.documentElement;
     root.classList.add("js");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    /* ---------- Sticky header ---------- */
-    const header = document.querySelector("[data-header]");
-    const onScroll = () => header && header.classList.toggle("is-scrolled", window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    /* ---------- Mobile menu ---------- */
-    const toggle = document.querySelector("[data-menu-toggle]");
-    const navList = document.getElementById("nav-list");
-    function setMobile(open) {
-        if (!toggle) return;
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-        document.body.classList.toggle("nav-open", open);
-    }
-    toggle && toggle.addEventListener("click", () => setMobile(toggle.getAttribute("aria-expanded") !== "true"));
-    navList && navList.addEventListener("click", (e) => {
-        if (e.target.closest("a")) { setMobile(false); closeMenu(); }
-    });
-
-    /* ---------- Services dropdown ---------- */
-    const trigger = document.querySelector("[data-menu-trigger]");
-    const menu = document.querySelector("[data-menu]");
-    function openMenu() { if (!menu) return; menu.hidden = false; trigger.setAttribute("aria-expanded", "true"); }
-    function closeMenu() { if (!menu) return; menu.hidden = true; trigger.setAttribute("aria-expanded", "false"); }
-    if (trigger && menu) {
-        trigger.addEventListener("click", (e) => { e.stopPropagation(); menu.hidden ? openMenu() : closeMenu(); });
-        document.addEventListener("click", (e) => { if (!menu.contains(e.target)) closeMenu(); });
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                if (!menu.hidden) { closeMenu(); trigger.focus(); }
-                setMobile(false);
-            }
-        });
-        menu.addEventListener("focusout", (e) => {
-            if (!menu.contains(e.relatedTarget) && e.relatedTarget !== trigger) closeMenu();
-        });
-    }
 
     /* ---------- Challenge tabs (WAI-ARIA tabs pattern) ---------- */
     document.querySelectorAll("[data-tabs]").forEach((wrap) => {
@@ -120,6 +80,4 @@
         });
     }
 
-    /* ---------- Footer year ---------- */
-    document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
