@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Approach — SuccessiveTechnologies</title>
+  <meta name="description"
+    content="How SuccessiveTechnologies works: discover, architect, engineer, and evolve, with clear outputs at every stage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{% static 'css/pages/our_approach.css' %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+  {% include "header.html" %}
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Our approach</p>
+          <h1>Clear thinking. Disciplined <em>engineering.</em></h1>
+          <p class="lead">Four stages, one team, no surprises. Here is how we take an idea from first conversation to a
+            system that keeps improving.</p>
+          <div class="hero-actions"><a href="#phases" class="btn btn-primary">See the four stages <span
+                aria-hidden="true">↓</span></a><a href="contact.html" class="btn btn-ghost">Talk to us</a></div>
+        </div>
+        <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
+            <defs>
+              <radialGradient id="cg">
+                <stop offset="0" stop-color="#63D5E8" stop-opacity=".5" />
+                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle class="hv-ring" cx="240" cy="240" r="170" />
+            <circle class="hv-ring dash" cx="240" cy="240" r="205" />
+            <circle class="hv-core" cx="240" cy="240" r="90" />
+            <path class="hv-link"
+              d="M240 70A170 170 0 0 1 410 240M410 240A170 170 0 0 1 240 410M240 410A170 170 0 0 1 70 240M70 240A170 170 0 0 1 240 70" />
+            <g class="hv-orb">
+              <circle cx="240" cy="70" r="4" fill="#63D5E8" />
+            </g>
+            <g class="hv-orb2">
+              <circle cx="240" cy="35" r="3" fill="#638BFF" />
+            </g>
+            <circle class="hv-node fill" cx="240" cy="70" r="7" />
+            <circle class="hv-node" cx="410" cy="240" r="7" />
+            <circle class="hv-node" cx="240" cy="410" r="7" />
+            <circle class="hv-node" cx="70" cy="240" r="7" />
+            <text class="hv-lbl" x="252" y="62">01 DISCOVER</text><text class="hv-lbl" x="378" y="270">02
+              ARCHITECT</text><text class="hv-lbl" x="132" y="436">03 ENGINEER</text><text class="hv-lbl" x="14"
+              y="222">04 EVOLVE</text>
+            <text class="hv-lbl" x="204" y="244" fill="#6B7486">repeat</text>
+          </svg></figure>
+      </div>
+    </section>
+
+    <section class="section" id="phases">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>The four stages</p>
+            <h2 class="h2">From first question to ongoing improvement.</h2>
+          </div>
+          <p class="lead">Each stage has clear inputs and outputs, so you always know what we are doing and what comes
+            next.</p>
+        </div>
+        <div class="phases">
+          <article class="phase" id="discover">
+            <div class="phase-head"><span class="phase-num">01</span>
+              <h3>Discover</h3>
+              <p>Understand the problem before proposing a solution.</p>
+            </div>
+            <div class="phase-cols">
+              <div>
+                <h4 class="col-h">What we do</h4>
+                <ul class="dlist">
+                  <li>Interview stakeholders and users</li>
+                  <li>Map current workflows and systems</li>
+                  <li>Identify constraints and risks</li>
+                  <li>Agree how success will be measured</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What you get</h4>
+                <ul class="dlist">
+                  <li>A clear problem statement and goals</li>
+                  <li>Prioritised requirements</li>
+                  <li>An initial risk list</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What we need from you</h4>
+                <ul class="dlist">
+                  <li>Access to the people who know the problem</li>
+                  <li>Existing documents and system access</li>
+                  <li>One accountable decision-maker</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="phase" id="architect">
+            <div class="phase-head"><span class="phase-num">02</span>
+              <h3>Architect</h3>
+              <p>Design for change and write the decisions down.</p>
+            </div>
+            <div class="phase-cols">
+              <div>
+                <h4 class="col-h">What we do</h4>
+                <ul class="dlist">
+                  <li>Compare options and explain trade-offs</li>
+                  <li>Design data, integrations, and security</li>
+                  <li>Threat-model the critical paths</li>
+                  <li>Plan delivery in small, testable steps</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What you get</h4>
+                <ul class="dlist">
+                  <li>An architecture overview</li>
+                  <li>Technology recommendations with reasons</li>
+                  <li>A scoped roadmap with estimates</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What we need from you</h4>
+                <ul class="dlist">
+                  <li>Feedback on options and priorities</li>
+                  <li>Technical and security constraints</li>
+                  <li>Sign-off on the first release scope</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="phase" id="engineer">
+            <div class="phase-head"><span class="phase-num">03</span>
+              <h3>Engineer</h3>
+              <p>Build in the open, in short iterations.</p>
+            </div>
+            <div class="phase-cols">
+              <div>
+                <h4 class="col-h">What we do</h4>
+                <ul class="dlist">
+                  <li>Develop iteratively with code review</li>
+                  <li>Write automated tests as we go</li>
+                  <li>Set up CI/CD pipelines and environments</li>
+                  <li>Demo working software regularly</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What you get</h4>
+                <ul class="dlist">
+                  <li>Working software every iteration</li>
+                  <li>Tests and documentation</li>
+                  <li>A staging environment you can try</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What we need from you</h4>
+                <ul class="dlist">
+                  <li>Timely feedback on demos</li>
+                  <li>Test data and user access</li>
+                  <li>Fast answers to open questions</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="phase" id="evolve">
+            <div class="phase-head"><span class="phase-num">04</span>
+              <h3>Evolve</h3>
+              <p>Launch is the start of the work, not the end.</p>
+            </div>
+            <div class="phase-cols">
+              <div>
+                <h4 class="col-h">What we do</h4>
+                <ul class="dlist">
+                  <li>Roll out and monitor the release</li>
+                  <li>Set up dashboards, alerts, and runbooks</li>
+                  <li>Fix, maintain, and support</li>
+                  <li>Measure results and improve</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What you get</h4>
+                <ul class="dlist">
+                  <li>A monitored, documented system</li>
+                  <li>Runbooks and handover or training</li>
+                  <li>A backlog of next improvements</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-h">What we need from you</h4>
+                <ul class="dlist">
+                  <li>Usage and business feedback</li>
+                  <li>A support owner on your side</li>
+                  <li>Priorities for the next cycle</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="standards">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Engineering standards</p>
+            <h2 class="h2">Quality is part of the work.</h2>
+          </div>
+          <p class="lead">These practices apply to every project, whatever its size.</p>
+        </div>
+        <ul class="grid">
+          <li class="cell"><span class="mono">STD.01</span>
+            <h3>Automated testing</h3>
+            <p>Tests run on every change so regressions are caught early.</p>
+          </li>
+          <li class="cell"><span class="mono">STD.02</span>
+            <h3>Peer code review</h3>
+            <p>Every change is read by a second engineer before it merges.</p>
+          </li>
+          <li class="cell"><span class="mono">STD.03</span>
+            <h3>Living documentation</h3>
+            <p>Architecture notes and runbooks stay with the code.</p>
+          </li>
+          <li class="cell"><span class="mono">STD.04</span>
+            <h3>Security by default</h3>
+            <p>Access control, dependency hygiene, and data handling from day one.</p>
+          </li>
+          <li class="cell"><span class="mono">STD.05</span>
+            <h3>Observability</h3>
+            <p>Logs, metrics, and alerts so you can see how the system behaves.</p>
+          </li>
+          <li class="cell"><span class="mono">STD.06</span>
+            <h3>Incremental delivery</h3>
+            <p>Small releases that reduce risk and keep options open.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="collaboration">
+      <div class="container split2">
+        <div class="sticky">
+          <p class="eyebrow"><span class="eyebrow-line"></span>How we collaborate</p>
+          <h2 class="h2">You see the work as it happens.</h2>
+          <p class="lead" style="margin-top:1.25rem">We work as an extension of your team, with a steady rhythm and no
+            black boxes.</p>
+        </div>
+        <ol class="rhythm">
+          <li>
+            <h3>Kickoff</h3>
+            <p>Agree goals, roles, communication channels, and the first milestone.</p>
+          </li>
+          <li>
+            <h3>A shared backlog</h3>
+            <p>One prioritised list you can see and reorder at any time.</p>
+          </li>
+          <li>
+            <h3>Regular demos</h3>
+            <p>Working software shown early and often, so feedback is cheap.</p>
+          </li>
+          <li>
+            <h3>Plain-language updates</h3>
+            <p>Progress, risks, and decisions you can read without a glossary.</p>
+          </li>
+          <li>
+            <h3>Retrospectives</h3>
+            <p>We review what worked and adjust how we work together.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="engage">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Ways to engage</p>
+            <h2 class="h2">Pick the shape that fits.</h2>
+          </div>
+          <p class="lead">Not sure which fits? Describe the problem and we will recommend one.</p>
+        </div>
+        <div class="models">
+          <article class="model"><span class="mono">01</span>
+            <h3>Project delivery</h3>
+            <p>A defined scope and outcome, such as a new product, platform, or integration, delivered from discovery to
+              launch.</p>
+          </article>
+          <article class="model"><span class="mono">02</span>
+            <h3>Dedicated team</h3>
+            <p>A stable group of engineers working alongside your team on a longer roadmap, with flexible scope.</p>
+          </article>
+          <article class="model"><span class="mono">03</span>
+            <h3>Advisory & review</h3>
+            <p>Focused help such as architecture reviews, security assessments, or modernization planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
+          <h2>Ready to start with the problem?</h2>
+        </div>
+        <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Start a conversation <span
+              aria-hidden="true">→</span></a><a href="industries.html" class="btn btn-ghost">See industries</a></div>
+      </div>
+    </section>
+  </main>
+  {% include "footer.html" %}
+  <script src="{% static 'js/pages/our_approach.js' %}"></script>
+  <script src="{% static 'js/site.js' %}"></script>
+
+</body>
+
+</html>

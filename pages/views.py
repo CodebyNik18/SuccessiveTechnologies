@@ -11,3 +11,12 @@ def policy(request):
 
 def terms(request):
     return render(request, 'pages/terms.html')
+
+def industry(request):
+    return render(request, 'pages/industry.html')
+
+def insight(request):
+    return render(request, 'pages/insight.html')
+
+def ourapproach(request):
+    return render(request, 'pages/our_approach.html')

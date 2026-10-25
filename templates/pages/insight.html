@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insights — SuccessiveTechnologies</title>
+    <meta name="description"
+        content="Perspectives on applied AI, cloud, architecture, security, and data from the SuccessiveTechnologies engineering team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pages/insight.css' %}">
+</head>
+
+<body>
+    {% include "header.html" %}
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span>Insights</p>
+                    <h1>Thinking beyond the <em>code.</em></h1>
+                    <p class="lead">Practical perspectives on AI, cloud, architecture, security, and data, written for
+                        people making technology decisions.</p>
+                    <div class="hero-actions"><a href="#articles" class="btn btn-primary">Browse articles <span
+                                aria-hidden="true">↓</span></a><a href="contact.html" class="btn btn-ghost">Suggest a
+                            topic</a></div>
+                </div>
+                <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
+                        <defs>
+                            <radialGradient id="cg">
+                                <stop offset="0" stop-color="#63D5E8" stop-opacity=".5" />
+                                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                        <circle class="hv-ring" cx="240" cy="240" r="190" />
+                        <circle class="hv-ring dash" cx="240" cy="240" r="215" />
+                        <circle class="hv-core" cx="240" cy="240" r="100" />
+                        <g class="hv-orb">
+                            <circle cx="240" cy="50" r="4" fill="#63D5E8" />
+                        </g>
+                        <g class="hv-orb2">
+                            <circle cx="240" cy="25" r="3" fill="#638BFF" />
+                        </g>
+                        <rect class="hv-card" x="130" y="215" width="220" height="130" rx="3" />
+                        <rect class="hv-card" x="115" y="190" width="220" height="130" rx="3" />
+                        <g class="hv-card top">
+                            <rect x="100" y="165" width="220" height="130" rx="3"
+                                style="fill:rgba(99,213,232,.08);stroke:#63D5E8" />
+                            <path class="hv-line a" d="M124 195h90" />
+                            <path class="hv-line" d="M124 218h172M124 234h172M124 250h120" />
+                            <circle cx="296" cy="195" r="4" fill="#638BFF" />
+                        </g>
+                        <text class="hv-lbl" x="320" y="150">ideas &amp; perspectives</text>
+                    </svg></figure>
+            </div>
+        </section>
+
+        <section class="section" id="featured">
+            <div class="container">
+                <p class="note"><b>Sample articles.</b> The titles below show what we plan to write about. Full articles
+                    are publishing soon.</p>
+                <article class="feature">
+                    <div class="feature-art" aria-hidden="true"><svg viewBox="0 0 300 220" aria-hidden="true">
+                            <g>
+                                <circle cx="150" cy="110" r="22" class="a" />
+                                <circle cx="150" cy="110" r="52" />
+                                <circle cx="150" cy="110" r="86" stroke-dasharray="3 6" />
+                                <path d="M60 50l68 48M240 50l-68 48M60 170l68-48M240 170l-68-48" />
+                            </g>
+                        </svg></div>
+                    <div class="feature-body">
+                        <div class="meta"><span class="tag">Applied AI</span><span class="soon mono"><span
+                                    class="pulse"></span>Publishing soon</span></div>
+                        <h3>How to evaluate whether your business needs AI automation</h3>
+                        <p class="ex">A simple way to separate real automation opportunities from hype: what to measure,
+                            what to try first, and when not to bother.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section alt" id="articles">
+            <div class="container">
+                <div class="head split">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span>Latest</p>
+                        <h2 class="h2">Articles by topic.</h2>
+                    </div>
+                    <p class="lead">Filter by the area you care about.</p>
+                </div>
+                <div class="filters" role="group" aria-label="Filter articles by topic"><button type="button"
+                        data-filter="All" aria-pressed="true">All</button><button type="button" data-filter="Applied AI"
+                        aria-pressed="false">Applied AI</button><button type="button" data-filter="Cloud"
+                        aria-pressed="false">Cloud</button><button type="button" data-filter="Architecture"
+                        aria-pressed="false">Architecture</button><button type="button" data-filter="Security"
+                        aria-pressed="false">Security</button><button type="button" data-filter="Data"
+                        aria-pressed="false">Data</button><span class="count mono" id="count" aria-live="polite"></span>
+                </div>
+                <div class="posts" id="posts">
+                    <article class="post" data-cat="Cloud"><span class="tag">Cloud</span>
+                        <h3>What to consider before moving workloads to the cloud</h3>
+                        <p>The questions about cost, risk, and ownership worth settling before the first migration step.
+                        </p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+                    <article class="post" data-cat="Architecture"><span class="tag">Architecture</span>
+                        <h3>Building software that scales with changing business needs</h3>
+                        <p>How to keep a codebase flexible as the business around it changes.</p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+                    <article class="post" data-cat="Security"><span class="tag">Security</span>
+                        <h3>A practical security checklist for new software projects</h3>
+                        <p>Basic controls that are cheap at the start and expensive to add later.</p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+                    <article class="post" data-cat="Data"><span class="tag">Data</span>
+                        <h3>Connecting scattered business data without a big-bang rewrite</h3>
+                        <p>An incremental route from spreadsheets and silos to trustworthy reporting.</p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+                    <article class="post" data-cat="Architecture"><span class="tag">Architecture</span>
+                        <h3>Modernizing legacy software one step at a time</h3>
+                        <p>Why gradual migration usually beats a full rewrite, and how to sequence it.</p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+                    <article class="post" data-cat="Applied AI"><span class="tag">Applied AI</span>
+                        <h3>Grounding AI assistants in sources you approve</h3>
+                        <p>How retrieval and citations keep an internal assistant useful and checkable.</p>
+                        <div class="foot"><span class="mono">Publishing soon</span><span class="arrow"
+                                aria-hidden="true">→</span></div>
+                    </article>
+
+                </div>
+                <p class="empty" id="empty" hidden>No articles in this topic yet.</p>
+            </div>
+        </section>
+
+        <section class="section" id="topics">
+            <div class="container">
+                <div class="head split">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span>What we write about</p>
+                        <h2 class="h2">Six areas we think about daily.</h2>
+                    </div>
+                    <p class="lead">The same disciplines we use on client work, explained plainly.</p>
+                </div>
+                <ul class="topics-grid">
+                    <li class="topic"><span class="mono">TOP.01</span>
+                        <h3>Applied AI</h3>
+                        <p>Where AI helps, where it does not, and how to introduce it safely.</p>
+                    </li>
+                    <li class="topic"><span class="mono">TOP.02</span>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Infrastructure, delivery pipelines, cost, and reliability.</p>
+                    </li>
+                    <li class="topic"><span class="mono">TOP.03</span>
+                        <h3>Architecture</h3>
+                        <p>Design decisions that keep options open as needs change.</p>
+                    </li>
+                    <li class="topic"><span class="mono">TOP.04</span>
+                        <h3>Security</h3>
+                        <p>Practical controls for teams building and running software.</p>
+                    </li>
+                    <li class="topic"><span class="mono">TOP.05</span>
+                        <h3>Data & Analytics</h3>
+                        <p>Pipelines, reporting, and making data trustworthy.</p>
+                    </li>
+                    <li class="topic"><span class="mono">TOP.06</span>
+                        <h3>Modernization</h3>
+                        <p>Moving off legacy systems without stopping the business.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
+                    <h2>Have a question we should write about?</h2>
+                </div>
+                <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Start a conversation <span
+                            aria-hidden="true">→</span></a><a href="our-approach.html" class="btn btn-ghost">See our
+                        approach</a></div>
+            </div>
+        </section>
+    </main>
+    {% include "footer.html" %}
+    <script src="{% static 'js/pages/insight.js' %}"></script>
+    <script src="{% static 'js/site.js' %}"></script>
+</body>
+
+</html>

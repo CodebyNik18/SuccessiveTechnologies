@@ -375,16 +375,37 @@
         color: var(--text);
         border-bottom: 1px solid var(--line);
         letter-spacing: -.02em;
+        background: none;
     }
 
     .nav-trigger {
-        background: none;
+        background: none !important;
         border-left: 0;
         border-right: 0;
         border-top: 0;
         font: inherit;
         font-size: 1.35rem;
         cursor: pointer;
+    }
+
+    /* Permanent shared header button fix */
+    .site-header .primary-nav .nav-trigger {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        color: var(--text-2) !important;
+        font-family: var(--font) !important;
+        font-size: 0.875rem !important;
+        font-weight: 400 !important;
+        padding: 0.5rem 0.8rem !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+    }
+
+    .site-header .primary-nav .nav-trigger:hover {
+        background: transparent !important;
+        color: var(--text) !important;
     }
 
     .mega {
@@ -505,4 +526,11 @@
         transition-duration: .001ms !important;
         animation-duration: .001ms !important;
     }
+}
+
+.site-header button.nav-trigger {
+    background-color: transparent !important;
+    border: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
 }

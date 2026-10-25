@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industries — SuccessiveTechnologies</title>
+  <meta name="description"
+    content="Software, AI, cloud, security, and data engineering shaped around retail, healthcare, finance, manufacturing, education, and professional services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{% static 'css/pages/industry.css' %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+  {% include "header.html" %}
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Industries</p>
+          <h1>Solutions shaped around your <em>industry.</em></h1>
+          <p class="lead">Every sector has its own constraints, users, and risks. We start by learning yours, then bring
+            the right engineering to bear.</p>
+          <div class="hero-actions"><a href="#sectors" class="btn btn-primary">Explore sectors <span
+                aria-hidden="true">↓</span></a><a href="contact.html" class="btn btn-ghost">Talk to us</a></div>
+        </div>
+        <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
+            <defs>
+              <radialGradient id="cg">
+                <stop offset="0" stop-color="#63D5E8" stop-opacity=".5" />
+                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle class="hv-ring" cx="240" cy="240" r="190" />
+            <circle class="hv-ring dash" cx="240" cy="240" r="215" />
+            <circle class="hv-core" cx="240" cy="240" r="80" />
+            <path class="hv-net"
+              d="M240 240L240 50M240 240L405 145M240 240L405 335M240 240L240 430M240 240L75 335M240 240L75 145" />
+            <g class="hv-orb">
+              <circle cx="240" cy="50" r="4" fill="#63D5E8" />
+            </g>
+            <circle class="hv-node fill" cx="240" cy="240" r="9" />
+            <circle class="hv-node" cx="240" cy="50" r="7" />
+            <circle class="hv-node" cx="405" cy="145" r="7" />
+            <circle class="hv-node" cx="405" cy="335" r="7" />
+            <circle class="hv-node" cx="240" cy="430" r="7" />
+            <circle class="hv-node" cx="75" cy="335" r="7" />
+            <circle class="hv-node" cx="75" cy="145" r="7" />
+            <text class="hv-lbl" x="252" y="44">RETAIL</text><text class="hv-lbl" x="368" y="124">HEALTH</text><text
+              class="hv-lbl" x="368" y="366">FINANCE</text><text class="hv-lbl" x="252" y="454">LOGISTICS</text><text
+              class="hv-lbl" x="10" y="366">EDUCATION</text><text class="hv-lbl" x="6" y="124">SERVICES</text>
+          </svg></figure>
+      </div>
+    </section>
+
+    <section class="section" id="sectors">
+      <div class="container">
+        <div class="head split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Where we create value</p>
+            <h2 class="h2">Six sectors, one engineering team.</h2>
+          </div>
+          <p class="lead">Typical problems we help with and the kind of systems we build. The pages describe our
+            capabilities, not specific client engagements.</p>
+        </div>
+        <div class="ind-layout">
+          <nav class="ind-nav" aria-label="Industries">
+            <h2>Industries</h2>
+            <ol>
+              <li><a href="#retail"><span>01</span>Retail & E-commerce</a></li>
+              <li><a href="#healthcare"><span>02</span>Healthcare</a></li>
+              <li><a href="#finance"><span>03</span>Financial Services</a></li>
+              <li><a href="#manufacturing"><span>04</span>Manufacturing & Logistics</a></li>
+              <li><a href="#education"><span>05</span>Education</a></li>
+              <li><a href="#professional"><span>06</span>Professional Services</a></li>
+            </ol>
+          </nav>
+          <div class="ind-list">
+            <article class="ind" id="retail">
+              <div class="ind-top"><span class="mono">IND.01</span></div>
+              <h3>Retail & E-commerce</h3>
+              <p class="ind-intro">Fast, dependable storefronts and the systems behind them.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Slow releases on a monolithic storefront</li>
+                    <li>Orders and inventory out of sync across channels</li>
+                    <li>Performance problems at peak demand</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Headless storefronts and checkout</li>
+                    <li>Order and inventory integrations</li>
+                    <li>Personalised customer journeys</li>
+                    <li>Sales and stock dashboards</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>Product Engineering</li>
+                    <li>Cloud & DevOps</li>
+                    <li>Data & Analytics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Peak-traffic readiness, payment and shipping integrations, and
+                  catalogue data quality.</p>
+              </div>
+            </article>
+            <article class="ind" id="healthcare">
+              <div class="ind-top"><span class="mono">IND.02</span></div>
+              <h3>Healthcare</h3>
+              <p class="ind-intro">Applications that respect how sensitive the data is.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Fragmented systems and manual admin work</li>
+                    <li>Patient communication spread over several tools</li>
+                    <li>Strict expectations for data protection</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Patient-facing applications</li>
+                    <li>Scheduling and workflow tools</li>
+                    <li>Secure system integrations</li>
+                    <li>Operational reporting</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>Product Engineering</li>
+                    <li>Cybersecurity</li>
+                    <li>Data & Analytics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Access control, audit trails, and data minimisation. We design for
+                  your regulatory requirements, and your own advisers confirm compliance.</p>
+              </div>
+            </article>
+            <article class="ind" id="finance">
+              <div class="ind-top"><span class="mono">IND.03</span></div>
+              <h3>Financial Services</h3>
+              <p class="ind-intro">Secure platforms and automation for operational processes.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Manual reconciliation and reporting</li>
+                    <li>Legacy systems that are hard to change</li>
+                    <li>High security and auditability requirements</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Secure customer and partner platforms</li>
+                    <li>Reporting and analytics systems</li>
+                    <li>Process automation</li>
+                    <li>Integrations with existing cores</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>Cybersecurity</li>
+                    <li>AI & Automation</li>
+                    <li>Consulting</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Strong identity controls, logging and traceability, and careful
+                  change management around critical systems.</p>
+              </div>
+            </article>
+            <article class="ind" id="manufacturing">
+              <div class="ind-top"><span class="mono">IND.04</span></div>
+              <h3>Manufacturing & Logistics</h3>
+              <p class="ind-intro">Operational visibility from the floor to the dashboard.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Disconnected systems on the floor and in the office</li>
+                    <li>Little real-time visibility</li>
+                    <li>Manual tracking and paperwork</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Operational dashboards</li>
+                    <li>System and device integrations</li>
+                    <li>Data pipelines from the floor</li>
+                    <li>Tracking and inventory tools</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>Data & Analytics</li>
+                    <li>Product Engineering</li>
+                    <li>Cloud & DevOps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Unreliable networks, mixed legacy equipment, and the need for
+                  dashboards that operators actually use.</p>
+              </div>
+            </article>
+            <article class="ind" id="education">
+              <div class="ind-top"><span class="mono">IND.05</span></div>
+              <h3>Education</h3>
+              <p class="ind-intro">Learning platforms and tools that scale with the institution.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Administrative tasks spread over many tools</li>
+                    <li>Scaling digital learning experiences</li>
+                    <li>Hard-to-get reporting on outcomes</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Learning platforms and portals</li>
+                    <li>Administrative tooling</li>
+                    <li>Student and parent experiences</li>
+                    <li>Progress analytics</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>Product Engineering</li>
+                    <li>Data & Analytics</li>
+                    <li>Cloud & DevOps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Varied user abilities, accessibility, seasonal load peaks, and
+                  privacy for younger users.</p>
+              </div>
+            </article>
+            <article class="ind" id="professional">
+              <div class="ind-top"><span class="mono">IND.06</span></div>
+              <h3>Professional Services</h3>
+              <p class="ind-intro">Client portals, knowledge tools, and automation for repeatable work.</p>
+              <div class="ind-cols">
+                <div>
+                  <h4 class="col-h">Typical challenges</h4>
+                  <ul class="dlist">
+                    <li>Knowledge scattered across documents and inboxes</li>
+                    <li>Repeatable delivery work done by hand</li>
+                    <li>Clients asking for status and visibility</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">What we build</h4>
+                  <ul class="dlist">
+                    <li>Client portals</li>
+                    <li>Retrieval-based knowledge assistants</li>
+                    <li>Workflow and document automation</li>
+                    <li>Utilisation and delivery reporting</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="col-h">Services involved</h4>
+                  <ul class="chips">
+                    <li>AI & Automation</li>
+                    <li>Product Engineering</li>
+                    <li>Consulting</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ind-foot">
+                <p><b>What we pay attention to.</b> Confidentiality between clients, approved sources for AI answers,
+                  and integration with the tools your people already use.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="across">
+      <div class="container across">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Not listed?</p>
+          <h2 class="h2">Good engineering travels well.</h2>
+        </div>
+        <div style="display:grid;gap:1.5rem">
+          <p class="lead">If your sector is not above, the work is probably familiar: integrating systems, automating
+            routine tasks, and making data useful. Tell us about your context and we will say honestly whether we are a
+            fit.</p>
+          <ul class="chips">
+            <li>System integrations</li>
+            <li>Workflow automation</li>
+            <li>Custom web &amp; mobile apps</li>
+            <li>Data pipelines</li>
+            <li>Cloud migration</li>
+            <li>Security reviews</li>
+          </ul>
+          <p class="note">Industry descriptions are illustrative and based on common patterns. They are not claims of
+            completed projects or certifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
+          <h2>Tell us about your industry.</h2>
+        </div>
+        <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Start a conversation <span
+              aria-hidden="true">→</span></a><a href="our-approach.html" class="btn btn-ghost">See our approach</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include "footer.html" %}
+  <script src="{% static 'js/pages/industry.js' %}"></script>
+  <script src="{% static 'js/site.js' %}"></script>
+</body>
+
+</html>
