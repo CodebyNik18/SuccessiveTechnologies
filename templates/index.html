@@ -1,0 +1,718 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuccessiveTechnologies — Technology that moves your business forward</title>
+    <meta name="description"
+        content="SuccessiveTechnologies engineers digital products, intelligent systems, and resilient infrastructure for ambitious businesses.">
+    <meta property="og:title" content="SuccessiveTechnologies — Technology that moves your business forward">
+    <meta property="og:description" content="Custom software, applied AI, cloud, security, and data engineering.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" data-header>
+        <div class="container header-inner">
+            <a href="#top" class="wordmark" aria-label="SuccessiveTechnologies home">
+                <span data-brand>SuccessiveTechnologies</span>
+            </a>
+
+            <nav class="primary-nav" aria-label="Primary">
+                <ul class="nav-list" id="nav-list">
+                    <li class="nav-item has-menu">
+                        <button class="nav-link nav-trigger" aria-expanded="false" aria-controls="services-menu"
+                            data-menu-trigger>
+                            Services
+                            <svg viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.3" />
+                            </svg>
+                        </button>
+                        <div class="mega" id="services-menu" data-menu hidden>
+                            <div class="mega-intro">
+                                <p class="eyebrow">Capabilities</p>
+                                <p class="mega-lead">Six disciplines, one engineering team.</p>
+                                <a href="#services" class="link-arrow">All services <span
+                                        aria-hidden="true">→</span></a>
+                            </div>
+                            <ul class="mega-list">
+                                <li><a href="#services"><span class="mono">01</span>Custom Software &amp; Product
+                                        Engineering</a></li>
+                                <li><a href="#services"><span class="mono">02</span>Artificial Intelligence &amp;
+                                        Automation</a></li>
+                                <li><a href="#services"><span class="mono">03</span>Cloud Infrastructure &amp;
+                                        DevOps</a></li>
+                                <li><a href="#services"><span class="mono">04</span>Cybersecurity</a></li>
+                                <li><a href="#services"><span class="mono">05</span>Data Engineering &amp; Analytics</a>
+                                </li>
+                                <li><a href="#services"><span class="mono">06</span>Technology Consulting &amp;
+                                        Modernization</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#approach">Our Approach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#principles">About</a></li>
+                    <li class="nav-item nav-cta-mobile"><a class="btn btn-primary" href="#contact">Start a Project</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a class="btn btn-primary btn-sm header-cta" href="#contact">Start a Project</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"
+                data-menu-toggle>
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="top">
+            <div class="hero-grid-bg" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow reveal"><span class="eyebrow-line"></span>Engineering the next advantage</p>
+                    <h1 class="hero-title reveal">Technology that moves your business <em>forward.</em></h1>
+                    <p class="hero-lead reveal">We engineer digital products, intelligent systems, and resilient
+                        infrastructure that help ambitious businesses solve complex problems and build what comes next.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#contact" class="btn btn-primary">Let's Discuss Your Project <span
+                                aria-hidden="true">→</span></a>
+                        <a href="#services" class="btn btn-ghost">Explore Our Capabilities</a>
+                    </div>
+                </div>
+
+                <figure class="hero-visual" aria-hidden="true">
+                    <svg viewBox="0 0 560 560" class="hero-svg">
+                        <defs>
+                            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+                                <stop offset="0" stop-color="#63D5E8" stop-opacity=".55" />
+                                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+                            </radialGradient>
+                            <linearGradient id="beam" x1="0" x2="1">
+                                <stop offset="0" stop-color="#638BFF" stop-opacity="0" />
+                                <stop offset=".5" stop-color="#63D5E8" />
+                                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <!-- architectural grid -->
+                        <g class="hv-grid">
+                            <path d="M40 280H520M280 40V520" />
+                            <circle cx="280" cy="280" r="240" />
+                            <circle cx="280" cy="280" r="180" stroke-dasharray="2 6" />
+                        </g>
+                        <!-- orbits -->
+                        <g class="hv-orbit o1">
+                            <ellipse cx="280" cy="280" rx="210" ry="78" />
+                            <circle cx="490" cy="280" r="3.5" class="hv-dot-c" />
+                        </g>
+                        <g class="hv-orbit o2">
+                            <ellipse cx="280" cy="280" rx="210" ry="78" transform="rotate(60 280 280)" />
+                            <circle cx="385" cy="462" r="3" class="hv-dot-b" />
+                        </g>
+                        <g class="hv-orbit o3">
+                            <ellipse cx="280" cy="280" rx="210" ry="78" transform="rotate(-60 280 280)" />
+                            <circle cx="175" cy="462" r="3" class="hv-dot-b" />
+                        </g>
+                        <!-- layered isometric stack -->
+                        <g class="hv-stack">
+                            <path class="layer l3" d="M280 318l92-46-92-46-92 46z" />
+                            <path class="layer l2" d="M280 290l92-46-92-46-92 46z" />
+                            <path class="layer l1" d="M280 262l92-46-92-46-92 46z" />
+                            <path class="hv-edge" d="M188 216v56M372 216v56M280 262v56" />
+                        </g>
+                        <circle cx="280" cy="216" r="70" fill="url(#core)" />
+                        <!-- network -->
+                        <g class="hv-net">
+                            <path
+                                d="M280 216L120 140M280 216L452 128M280 216L470 380M280 318L110 410M120 140L70 260M452 128L520 230M110 410L250 480" />
+                        </g>
+                        <g class="hv-nodes">
+                            <circle cx="120" cy="140" r="4" />
+                            <circle cx="452" cy="128" r="4" />
+                            <circle cx="470" cy="380" r="4" />
+                            <circle cx="110" cy="410" r="4" />
+                            <circle cx="70" cy="260" r="2.5" />
+                            <circle cx="520" cy="230" r="2.5" />
+                            <circle cx="250" cy="480" r="2.5" />
+                            <circle cx="280" cy="216" r="5" class="hv-core-dot" />
+                        </g>
+                        <rect class="hv-beam" x="40" y="279.5" width="160" height="1" fill="url(#beam)" />
+                        <!-- annotations -->
+                        <g class="hv-label">
+                            <text x="128" y="132">api.gateway</text>
+                            <text x="380" y="118">inference</text>
+                            <text x="400" y="404">observability</text>
+                            <text x="40" y="430">data.lake</text>
+                            <text x="394" y="504">LAT 12.9° · v3.2</text>
+                        </g>
+                    </svg>
+                    <figcaption class="hv-caption mono"><span class="pulse"></span>System map — illustrative
+                    </figcaption>
+                </figure>
+            </div>
+            <a href="#capabilities" class="scroll-cue" aria-label="Scroll to capabilities"><span></span></a>
+        </section>
+
+        <!-- ================= CAPABILITY STRIP ================= -->
+        <section class="cap-strip" id="capabilities" aria-label="Capabilities">
+            <div class="container cap-inner">
+                <p class="cap-statement reveal">From strategy to production, we bring business thinking and engineering
+                    execution together.</p>
+                <ul class="cap-list reveal">
+                    <li><span class="mono">/01</span>Product Engineering</li>
+                    <li><span class="mono">/02</span>Applied AI</li>
+                    <li><span class="mono">/03</span>Cloud &amp; DevOps</li>
+                    <li><span class="mono">/04</span>Data Platforms</li>
+                    <li><span class="mono">/05</span>Security Engineering</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section-head split">
+                    <div>
+                        <p class="eyebrow reveal"><span class="eyebrow-line"></span>What we do</p>
+                        <h2 class="section-title reveal">Technology built around the problem.</h2>
+                    </div>
+                    <p class="section-lead reveal">Every business challenge is different. We bring the right engineering
+                        capabilities together to create solutions that are practical, scalable, and built for long-term
+                        value.</p>
+                </div>
+
+                <div class="services-layout">
+                    <article class="service-feature reveal">
+                        <div class="sf-top">
+                            <span class="mono num">01</span>
+                            <span class="tag">Core discipline</span>
+                        </div>
+                        <svg class="sf-art" viewBox="0 0 400 200" aria-hidden="true">
+                            <g class="sf-lines">
+                                <rect x="20" y="30" width="150" height="100" rx="2" />
+                                <rect x="40" y="50" width="150" height="100" rx="2" />
+                                <rect x="60" y="70" width="150" height="100" rx="2" class="accent" />
+                                <path d="M210 120h60l20-40h90M270 120l20 40h90" />
+                                <circle cx="380" cy="80" r="4" class="dot" />
+                                <circle cx="380" cy="160" r="4" class="dot" />
+                            </g>
+                            <g class="sf-code mono"><text x="76" y="96">&lt;Product/&gt;</text><text x="76"
+                                    y="116">api.v2 → ok</text></g>
+                        </svg>
+                        <h3>Custom Software &amp; Product Engineering</h3>
+                        <p>Web applications, mobile applications, e-commerce platforms, APIs, business systems, and
+                            software integrations.</p>
+                        <a href="#contact" class="link-arrow">Discuss a product <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <ol class="service-rows" start="2">
+                        <li class="service-row reveal">
+                            <a href="#contact">
+                                <span class="mono num">02</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <circle cx="16" cy="16" r="5" />
+                                    <path d="M16 3v6M16 23v6M3 16h6M23 16h6M7 7l4 4M21 21l4 4M25 7l-4 4M11 21l-4 4" />
+                                </svg>
+                                <span class="sr-body">
+                                    <h3>Artificial Intelligence &amp; Automation</h3>
+                                    <p>AI integrations, knowledge assistants, intelligent workflows, document
+                                        processing, and business process automation.</p>
+                                </span>
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                        <li class="service-row reveal">
+                            <a href="#contact">
+                                <span class="mono num">03</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M9 22a6 6 0 1 1 1.5-11.8A8 8 0 0 1 26 13a5 5 0 0 1-1 9.9z" />
+                                    <path d="M12 26h8M16 22v4" />
+                                </svg>
+                                <span class="sr-body">
+                                    <h3>Cloud Infrastructure &amp; DevOps</h3>
+                                    <p>Cloud architecture, AWS infrastructure, deployment automation, observability,
+                                        scalability, and reliability engineering.</p>
+                                </span>
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                        <li class="service-row reveal">
+                            <a href="#contact">
+                                <span class="mono num">04</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7z" />
+                                    <path d="M12 16l3 3 5-6" />
+                                </svg>
+                                <span class="sr-body">
+                                    <h3>Cybersecurity</h3>
+                                    <p>Secure application development, security assessments, vulnerability management,
+                                        identity controls, and risk reduction.</p>
+                                </span>
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                        <li class="service-row reveal">
+                            <a href="#contact">
+                                <span class="mono num">05</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <ellipse cx="16" cy="7" rx="10" ry="3.5" />
+                                    <path
+                                        d="M6 7v18c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5V7M6 16c0 2 4.5 3.5 10 3.5S26 18 26 16" />
+                                </svg>
+                                <span class="sr-body">
+                                    <h3>Data Engineering &amp; Analytics</h3>
+                                    <p>Data pipelines, system integrations, analytics platforms, reporting dashboards,
+                                        and business intelligence.</p>
+                                </span>
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                        <li class="service-row reveal">
+                            <a href="#contact">
+                                <span class="mono num">06</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M4 26h24M7 26V14l9-8 9 8v12" />
+                                    <path d="M13 26v-7h6v7" />
+                                </svg>
+                                <span class="sr-body">
+                                    <h3>Technology Consulting &amp; Modernization</h3>
+                                    <p>Technical strategy, legacy modernization, software architecture, system
+                                        integrations, and performance improvements.</p>
+                                </span>
+                                <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CHALLENGES ================= -->
+        <section class="section challenges" id="challenges">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow reveal"><span class="eyebrow-line"></span>Built around your goals</p>
+                    <h2 class="section-title wide reveal">Start with the challenge. Engineer the solution.</h2>
+                </div>
+
+                <div class="challenge-ui reveal" data-tabs>
+                    <div class="challenge-tabs" role="tablist" aria-label="Business challenges"
+                        aria-orientation="vertical">
+                        <button role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" tabindex="0"><span
+                                class="mono">01</span>Launching a digital product</button>
+                        <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span
+                                class="mono">02</span>Automating repetitive work</button>
+                        <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span
+                                class="mono">03</span>Scaling an existing platform</button>
+                        <button role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1"><span
+                                class="mono">04</span>Modernizing legacy software</button>
+                        <button role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1"><span
+                                class="mono">05</span>Connecting disconnected business data</button>
+                    </div>
+
+                    <div class="challenge-panels">
+                        <div role="tabpanel" id="panel-1" aria-labelledby="tab-1" class="challenge-panel">
+                            <p class="panel-kicker mono">Challenge / 01</p>
+                            <h3>You have an idea and need to ship it with confidence.</h3>
+                            <p>Explore product architecture, application development, integrations, testing, and
+                                deployment.</p>
+                            <ul class="chips">
+                                <li>Product architecture</li>
+                                <li>Application development</li>
+                                <li>Integrations</li>
+                                <li>Testing</li>
+                                <li>Deployment</li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" class="challenge-panel" hidden>
+                            <p class="panel-kicker mono">Challenge / 02</p>
+                            <h3>Your teams spend hours on work a system could handle.</h3>
+                            <p>Explore workflow automation and appropriate AI integrations.</p>
+                            <ul class="chips">
+                                <li>Workflow automation</li>
+                                <li>Document processing</li>
+                                <li>AI integrations</li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" class="challenge-panel" hidden>
+                            <p class="panel-kicker mono">Challenge / 03</p>
+                            <h3>Growth is putting pressure on your platform.</h3>
+                            <p>Explore performance optimization, cloud infrastructure, monitoring, and reliability
+                                improvements.</p>
+                            <ul class="chips">
+                                <li>Performance</li>
+                                <li>Cloud infrastructure</li>
+                                <li>Monitoring</li>
+                                <li>Reliability</li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" id="panel-4" aria-labelledby="tab-4" class="challenge-panel" hidden>
+                            <p class="panel-kicker mono">Challenge / 04</p>
+                            <h3>Critical software is holding the business back.</h3>
+                            <p>Explore system architecture improvements, integrations, and gradual modernization.</p>
+                            <ul class="chips">
+                                <li>Architecture review</li>
+                                <li>Integrations</li>
+                                <li>Incremental migration</li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" id="panel-5" aria-labelledby="tab-5" class="challenge-panel" hidden>
+                            <p class="panel-kicker mono">Challenge / 05</p>
+                            <h3>Your data lives in too many places to be useful.</h3>
+                            <p>Explore data pipelines, reporting, and system integrations.</p>
+                            <ul class="chips">
+                                <li>Data pipelines</li>
+                                <li>Reporting</li>
+                                <li>System integrations</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="link-arrow panel-link">Talk through your challenge <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INDUSTRIES ================= -->
+        <section class="section industries" id="industries">
+            <div class="container">
+                <div class="section-head split">
+                    <div>
+                        <p class="eyebrow reveal"><span class="eyebrow-line"></span>Where we create value</p>
+                        <h2 class="section-title reveal">Solutions shaped around your industry.</h2>
+                    </div>
+                </div>
+                <ul class="industry-grid">
+                    <li class="industry reveal"><span class="mono">IND.01</span>
+                        <h3>Retail &amp; E-commerce</h3>
+                        <p>Storefronts, order and inventory integrations, and personalised customer journeys.</p>
+                    </li>
+                    <li class="industry reveal"><span class="mono">IND.02</span>
+                        <h3>Healthcare</h3>
+                        <p>Patient-facing applications, workflow tools, and careful handling of sensitive data.</p>
+                    </li>
+                    <li class="industry reveal"><span class="mono">IND.03</span>
+                        <h3>Financial Services</h3>
+                        <p>Secure platforms, reporting systems, and automation for operational processes.</p>
+                    </li>
+                    <li class="industry reveal"><span class="mono">IND.04</span>
+                        <h3>Manufacturing &amp; Logistics</h3>
+                        <p>Operational visibility, system integrations, and data from the floor to the dashboard.</p>
+                    </li>
+                    <li class="industry reveal"><span class="mono">IND.05</span>
+                        <h3>Education</h3>
+                        <p>Learning platforms, administrative tooling, and scalable digital experiences.</p>
+                    </li>
+                    <li class="industry reveal"><span class="mono">IND.06</span>
+                        <h3>Professional Services</h3>
+                        <p>Client portals, knowledge tools, and automation for repeatable delivery work.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= APPROACH ================= -->
+        <section class="section approach" id="approach">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow reveal"><span class="eyebrow-line"></span>How we work</p>
+                    <h2 class="section-title reveal">Clear thinking. Disciplined engineering.</h2>
+                </div>
+                <ol class="timeline">
+                    <li class="stage reveal"><span class="stage-node" aria-hidden="true"></span><span
+                            class="mono stage-num">01</span>
+                        <h3>Discover</h3>
+                        <p>Understand business goals, users, constraints, and technical requirements.</p>
+                    </li>
+                    <li class="stage reveal"><span class="stage-node" aria-hidden="true"></span><span
+                            class="mono stage-num">02</span>
+                        <h3>Architect</h3>
+                        <p>Define the solution, technical architecture, and implementation plan.</p>
+                    </li>
+                    <li class="stage reveal"><span class="stage-node" aria-hidden="true"></span><span
+                            class="mono stage-num">03</span>
+                        <h3>Engineer</h3>
+                        <p>Build, integrate, test, and validate the solution.</p>
+                    </li>
+                    <li class="stage reveal"><span class="stage-node" aria-hidden="true"></span><span
+                            class="mono stage-num">04</span>
+                        <h3>Evolve</h3>
+                        <p>Deploy, monitor, maintain, and improve the solution as business needs change.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ================= WORK ================= -->
+        <section class="section work" id="work">
+            <div class="container">
+                <div class="section-head split">
+                    <div>
+                        <p class="eyebrow reveal"><span class="eyebrow-line"></span>Engineering in practice</p>
+                        <h2 class="section-title reveal">Thoughtful technology. Meaningful outcomes.</h2>
+                    </div>
+                    <p class="section-lead reveal note">The projects below are <strong>illustrative concepts</strong>
+                        showing the kind of work we take on — not completed client engagements.</p>
+                </div>
+
+                <div class="work-grid">
+                    <article class="case case-wide reveal">
+                        <div class="case-art art-commerce" aria-hidden="true">
+                            <svg viewBox="0 0 600 300">
+                                <g>
+                                    <rect x="60" y="60" width="200" height="180" />
+                                    <rect x="290" y="60" width="120" height="80" />
+                                    <rect x="290" y="160" width="120" height="80" />
+                                    <rect x="440" y="60" width="100" height="180" class="a" />
+                                    <path d="M260 150h30M410 100h30M410 200h30" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta"><span class="tag tag-concept">Illustrative concept</span><span
+                                    class="mono">E-commerce</span></div>
+                            <h3>E-commerce platform modernization</h3>
+                            <dl>
+                                <div>
+                                    <dt>Challenge</dt>
+                                    <dd>A monolithic storefront slows releases and struggles during peak demand.</dd>
+                                </div>
+                                <div>
+                                    <dt>Proposed solution</dt>
+                                    <dd>Incrementally separate catalogue, checkout, and order services behind a stable
+                                        API layer.</dd>
+                                </div>
+                            </dl>
+                            <ul class="chips">
+                                <li>Headless commerce</li>
+                                <li>Node.js</li>
+                                <li>PostgreSQL</li>
+                                <li>CDN</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="case reveal">
+                        <div class="case-art art-ai" aria-hidden="true">
+                            <svg viewBox="0 0 300 220">
+                                <g>
+                                    <circle cx="150" cy="110" r="22" class="a" />
+                                    <circle cx="150" cy="110" r="52" />
+                                    <circle cx="150" cy="110" r="86" stroke-dasharray="3 6" />
+                                    <path d="M60 50l68 48M240 50l-68 48M60 170l68-48M240 170l-68-48" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta"><span class="tag tag-concept">Illustrative concept</span><span
+                                    class="mono">Applied AI</span></div>
+                            <h3>AI-powered knowledge assistant</h3>
+                            <dl>
+                                <div>
+                                    <dt>Challenge</dt>
+                                    <dd>Staff lose time searching scattered internal documents.</dd>
+                                </div>
+                                <div>
+                                    <dt>Proposed solution</dt>
+                                    <dd>A retrieval-based assistant that answers with citations to approved sources.
+                                    </dd>
+                                </div>
+                            </dl>
+                            <ul class="chips">
+                                <li>LLMs</li>
+                                <li>Vector search</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="case reveal">
+                        <div class="case-art art-cloud" aria-hidden="true">
+                            <svg viewBox="0 0 300 220">
+                                <g>
+                                    <path d="M40 170l110-55 110 55-110 55z" />
+                                    <path d="M40 130l110-55 110 55-110 55z" />
+                                    <path d="M40 90l110-55 110 55-110 55z" class="a" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta"><span class="tag tag-concept">Illustrative concept</span><span
+                                    class="mono">Cloud</span></div>
+                            <h3>Cloud infrastructure transformation</h3>
+                            <dl>
+                                <div>
+                                    <dt>Challenge</dt>
+                                    <dd>Manual deployments and limited visibility create operational risk.</dd>
+                                </div>
+                                <div>
+                                    <dt>Proposed solution</dt>
+                                    <dd>Infrastructure as code, automated pipelines, and unified observability.</dd>
+                                </div>
+                            </dl>
+                            <ul class="chips">
+                                <li>AWS</li>
+                                <li>Terraform</li>
+                                <li>Kubernetes</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRINCIPLES ================= -->
+        <section class="section principles" id="principles">
+            <div class="container principles-inner">
+                <div class="principles-head">
+                    <p class="eyebrow reveal"><span class="eyebrow-line"></span>Our principles</p>
+                    <h2 class="section-title reveal">More than implementation. A technology partner.</h2>
+                </div>
+                <ol class="principle-list">
+                    <li class="reveal"><span class="mono">i.</span>
+                        <h3>Business-first problem solving</h3>
+                        <p>We start with outcomes and constraints, then choose the technology.</p>
+                    </li>
+                    <li class="reveal"><span class="mono">ii.</span>
+                        <h3>Thoughtful technical architecture</h3>
+                        <p>Decisions made today should keep options open tomorrow.</p>
+                    </li>
+                    <li class="reveal"><span class="mono">iii.</span>
+                        <h3>Quality-focused engineering</h3>
+                        <p>Testing, reviews, and documentation are part of the work, not extras.</p>
+                    </li>
+                    <li class="reveal"><span class="mono">iv.</span>
+                        <h3>Continuous improvement</h3>
+                        <p>Software is never finished; we measure, learn, and refine.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ================= INSIGHTS ================= -->
+        <section class="section insights" id="insights">
+            <div class="container">
+                <div class="section-head split">
+                    <div>
+                        <p class="eyebrow reveal"><span class="eyebrow-line"></span>Ideas &amp; perspectives</p>
+                        <h2 class="section-title reveal">Thinking beyond the code.</h2>
+                    </div>
+                    <p class="section-lead reveal note">Sample articles — publishing soon.</p>
+                </div>
+                <ul class="insight-list">
+                    <li class="insight insight-lead reveal"><a href="#insights" aria-disabled="true"><span
+                                class="tag">Applied AI</span>
+                            <h3>How to evaluate whether your business needs AI automation</h3><span class="arrow"
+                                aria-hidden="true">→</span>
+                        </a></li>
+                    <li class="insight reveal"><a href="#insights" aria-disabled="true"><span class="tag">Cloud</span>
+                            <h3>What to consider before moving workloads to the cloud</h3><span class="arrow"
+                                aria-hidden="true">→</span>
+                        </a></li>
+                    <li class="insight reveal"><a href="#insights" aria-disabled="true"><span
+                                class="tag">Architecture</span>
+                            <h3>Building software that scales with changing business needs</h3><span class="arrow"
+                                aria-hidden="true">→</span>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= CTA + CONTACT ================= -->
+        <section class="section cta" id="contact">
+            <div class="cta-bg" aria-hidden="true"></div>
+            <div class="container cta-inner">
+                <div class="cta-copy">
+                    <p class="eyebrow reveal"><span class="eyebrow-line"></span>Start a conversation</p>
+                    <h2 class="cta-title reveal">Have a complex challenge? Let's work through it.</h2>
+                    <p class="section-lead reveal">Tell us what you're trying to achieve. We'll start by understanding
+                        the problem and exploring the right technical approach.</p>
+                </div>
+
+                <form class="contact-form reveal" action="#" method="post" novalidate data-contact-form>
+                    <p class="form-note mono">Demo form — real submission requires backend integration.</p>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <div class="field">
+                        <label for="email">Work email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <div class="field">
+                        <label for="message">What are you trying to achieve?</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Start a Conversation <span
+                            aria-hidden="true">→</span></button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="wordmark"><svg class="wordmark-mark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 20V4l16 16V4" fill="none" stroke="currentColor" stroke-width="1.6" />
+                    </svg><span data-brand>SuccessiveTechnologies</span></a>
+                <p>Software engineering, applied AI, cloud, security, and data — built around the problems businesses
+                    actually have.</p>
+            </div>
+            <nav aria-label="Services">
+                <h2 class="footer-h">Services</h2>
+                <ul>
+                    <li><a href="#services">Product Engineering</a></li>
+                    <li><a href="#services">AI &amp; Automation</a></li>
+                    <li><a href="#services">Cloud &amp; DevOps</a></li>
+                    <li><a href="#services">Cybersecurity</a></li>
+                    <li><a href="#services">Data &amp; Analytics</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Company">
+                <h2 class="footer-h">Company</h2>
+                <ul>
+                    <li><a href="#principles">About</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2 class="footer-h">Connect</h2>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span data-year>2026</span> <span data-brand>SuccessiveTechnologies</span>. All rights reserved.</p>
+            <ul>
+                <li><a href="#" data-placeholder>Privacy Policy</a></li>
+                <li><a href="#" data-placeholder>Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+
+</html>
