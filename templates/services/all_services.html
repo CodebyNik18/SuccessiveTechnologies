@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services — SuccessiveTechnologies</title>
+    <meta name="description"
+        content="Custom software, applied AI, cloud and DevOps, cybersecurity, data engineering, and technology consulting from one engineering team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <style>
+        :root {
+            --bg: #080B12;
+            --bg-2: #0D111B;
+            --surface: #111827;
+            --text: #F5F7FA;
+            --text-2: #A1AAB8;
+            --text-3: #6B7486;
+            --blue: #638BFF;
+            --cyan: #63D5E8;
+            --line: rgba(148, 163, 196, .14);
+            --line-strong: rgba(148, 163, 196, .26);
+            --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+            --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+            --fs-h2: clamp(1.9rem, 1.3rem + 2.4vw, 3.4rem);
+            --fs-lead: clamp(1rem, .95rem + .3vw, 1.18rem);
+            --container: 1280px;
+            --gutter: clamp(1.25rem, .8rem + 2vw, 2.5rem);
+            --section: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+            --radius: 4px;
+            --ease: cubic-bezier(.2, .7, .2, 1);
+            --header-h: 68px
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            scroll-padding-top: calc(var(--header-h) + 24px)
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 1rem;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        ol,
+        figure {
+            margin: 0
+        }
+
+        ul,
+        ol {
+            padding: 0;
+            list-style: none
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        svg {
+            display: block;
+            max-width: 100%
+        }
+
+        ::selection {
+            background: var(--blue);
+            color: var(--bg)
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 3px;
+            border-radius: 2px
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: var(--gutter)
+        }
+
+        .mono {
+            font-family: var(--mono);
+            font-size: .72rem;
+            letter-spacing: .04em;
+            color: var(--text-3)
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--text-2)
+        }
+
+        .eyebrow-line {
+            width: 28px;
+            height: 1px;
+            background: var(--blue)
+        }
+
+        .section {
+            padding-block: var(--section);
+            position: relative
+        }
+
+        .section+.section {
+            border-top: 1px solid var(--line)
+        }
+
+        .alt {
+            background: var(--bg-2)
+        }
+
+        .h2 {
+            font-size: var(--fs-h2);
+            font-weight: 500;
+            line-height: 1.05;
+            letter-spacing: -.035em;
+            max-width: 18ch;
+            margin-top: 1.25rem
+        }
+
+        .lead {
+            color: var(--text-2);
+            font-size: var(--fs-lead);
+            max-width: 48ch
+        }
+
+        .head {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: clamp(2.5rem, 2rem + 3vw, 4.5rem)
+        }
+
+        @media(min-width:900px) {
+            .head.split {
+                grid-template-columns: 1.3fr 1fr;
+                align-items: end;
+                gap: 2rem
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            justify-content: center;
+            height: 48px;
+            padding: 0 1.4rem;
+            border-radius: var(--radius);
+            font-size: .925rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background .25s var(--ease), border-color .25s var(--ease)
+        }
+
+        .btn span {
+            transition: transform .25s var(--ease)
+        }
+
+        .btn:hover span {
+            transform: translateX(3px)
+        }
+
+        .btn-primary {
+            background: var(--text);
+            color: var(--bg)
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan)
+        }
+
+        .btn-ghost {
+            border: 1px solid var(--line-strong)
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--text-2);
+            background: rgba(255, 255, 255, .03)
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            height: 24px;
+            padding: 0 .6rem;
+            border: 1px solid rgba(99, 213, 232, .35);
+            border-radius: 2px;
+            font-size: .68rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--cyan)
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem
+        }
+
+        .chips li {
+            font-family: var(--mono);
+            font-size: .72rem;
+            color: var(--text-2);
+            padding: .3rem .65rem;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid var(--line);
+            border-radius: 2px
+        }
+
+        .dlist {
+            display: grid;
+            gap: .6rem
+        }
+
+        .dlist li {
+            position: relative;
+            padding-left: 1.35rem;
+            color: var(--text-2);
+            font-size: .94rem
+        }
+
+        .dlist li::before {
+            content: "";
+            position: absolute;
+            left: .1rem;
+            top: .62em;
+            width: 6px;
+            height: 6px;
+            border: 1px solid var(--cyan);
+            transform: rotate(45deg)
+        }
+
+        .col-h {
+            font-size: .7rem;
+            font-weight: 500;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--text-3);
+            margin-bottom: 1rem
+        }
+
+        /* hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: calc(var(--header-h) + clamp(3rem, 2rem + 5vw, 6rem)) 0 clamp(3rem, 2.5rem + 3vw, 5.5rem)
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .55;
+            background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+            background-size: 80px 80px;
+            -webkit-mask-image: radial-gradient(ellipse 70% 80% at 75% 35%, #000 15%, transparent 72%);
+            mask-image: radial-gradient(ellipse 70% 80% at 75% 35%, #000 15%, transparent 72%)
+        }
+
+        .hero-inner {
+            position: relative;
+            display: grid;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 1.4rem + 5vw, 5.4rem);
+            font-weight: 500;
+            line-height: .98;
+            letter-spacing: -.05em;
+            margin: 1.5rem 0;
+            max-width: 13ch
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: transparent;
+            background: linear-gradient(100deg, var(--text) 10%, var(--cyan) 60%, var(--blue));
+            -webkit-background-clip: text;
+            background-clip: text
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            margin-top: 2.25rem
+        }
+
+        .hero-visual {
+            width: 100%;
+            max-width: 480px;
+            margin-inline: auto
+        }
+
+        .hero-visual svg {
+            width: 100%;
+            height: auto;
+            overflow: visible
+        }
+
+        .hv-ring {
+            fill: none;
+            stroke: var(--line-strong)
+        }
+
+        .hv-ring.dash {
+            stroke: rgba(99, 139, 255, .4);
+            stroke-dasharray: 3 6;
+            transform-origin: 240px 240px;
+            animation: spin 60s linear infinite
+        }
+
+        .hv-node {
+            fill: var(--bg);
+            stroke: var(--cyan);
+            stroke-width: 1.2
+        }
+
+        .hv-node.fill {
+            fill: var(--cyan)
+        }
+
+        .hv-lbl {
+            font-family: var(--mono);
+            font-size: 11px;
+            fill: var(--text-2);
+            letter-spacing: .06em
+        }
+
+        .hv-link {
+            fill: none;
+            stroke: rgba(161, 170, 184, .3);
+            stroke-dasharray: 3 5;
+            animation: dash 30s linear infinite
+        }
+
+        .hv-orb {
+            transform-origin: 240px 240px;
+            animation: spin 14s linear infinite
+        }
+
+        .hv-core {
+            fill: url(#cg)
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--cyan);
+            animation: pulse 2.4s infinite
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -400
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(99, 213, 232, .6)
+            }
+
+            70% {
+                box-shadow: 0 0 0 8px rgba(99, 213, 232, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(99, 213, 232, 0)
+            }
+        }
+
+        @media(min-width:960px) {
+            .hero-inner {
+                grid-template-columns: 1.15fr .85fr
+            }
+        }
+
+        /* cta */
+        .cta {
+            position: relative;
+            overflow: hidden;
+            background: var(--surface)
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse 50% 70% at 0% 100%, rgba(99, 139, 255, .18), transparent 70%), repeating-linear-gradient(90deg, transparent 0 79px, var(--line) 79px 80px);
+            -webkit-mask-image: linear-gradient(transparent, #000 40%);
+            mask-image: linear-gradient(transparent, #000 40%)
+        }
+
+        .cta .container {
+            position: relative;
+            display: grid;
+            gap: 2.5rem
+        }
+
+        .cta h2 {
+            font-size: clamp(2.1rem, 1.4rem + 3.2vw, 4.2rem);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -.045em;
+            margin-top: 1.5rem;
+            max-width: 15ch
+        }
+
+        .cta .hero-actions {
+            margin-top: 0
+        }
+
+        @media(min-width:1000px) {
+            .cta .container {
+                grid-template-columns: 1.2fr .8fr;
+                align-items: end;
+                gap: 5rem
+            }
+
+            .cta .hero-actions {
+                justify-content: flex-end
+            }
+        }
+
+        /* motion */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .9s var(--ease) var(--d, 0s), transform .9s var(--ease) var(--d, 0s)
+        }
+
+        .js .reveal.is-visible {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .001ms !important
+            }
+
+            .js .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .hv-orb2 {
+            transform-origin: 240px 240px;
+            animation: spin 22s linear infinite reverse
+        }
+
+        /* overview */
+        .grid {
+            display: grid;
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line)
+        }
+
+        .cell {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding: 2rem 1.75rem 2.25rem;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            transition: background .35s var(--ease)
+        }
+
+        .cell::after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            transition: transform .6s var(--ease), border-color .4s
+        }
+
+        .cell:hover {
+            background: var(--bg-2)
+        }
+
+        .cell:hover::after {
+            transform: scale(1.5);
+            border-color: rgba(99, 213, 232, .3)
+        }
+
+        .cell .icon,
+        .svc-icon {
+            width: 30px;
+            height: 30px;
+            fill: none;
+            stroke: var(--text-2);
+            stroke-width: 1.2;
+            transition: stroke .3s
+        }
+
+        .cell:hover .icon {
+            stroke: var(--cyan)
+        }
+
+        .cell h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: -.02em;
+            margin: 1.5rem 0 .25rem
+        }
+
+        .cell p {
+            color: var(--text-2);
+            font-size: .93rem;
+            max-width: 34ch
+        }
+
+        .cell .go {
+            margin-top: auto;
+            padding-top: 1.25rem;
+            color: var(--text-3);
+            font-size: .85rem;
+            transition: color .3s, transform .3s var(--ease)
+        }
+
+        .cell:hover .go {
+            color: var(--cyan);
+            transform: translateX(4px)
+        }
+
+        @media(min-width:640px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(min-width:1000px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .cell {
+                padding: 2.5rem 2.25rem 3rem
+            }
+        }
+
+        /* detail */
+        .svc {
+            display: grid;
+            gap: 2rem;
+            padding: clamp(2.75rem, 2rem + 3vw, 5rem) 0;
+            border-top: 1px solid var(--line)
+        }
+
+        .svc:first-child {
+            border-top: 0;
+            padding-top: 0
+        }
+
+        .svc-head {
+            display: grid;
+            gap: 1rem;
+            align-content: start
+        }
+
+        .svc-top {
+            display: flex;
+            gap: 1rem;
+            align-items: center
+        }
+
+        .svc-num {
+            font-family: var(--mono);
+            font-size: .85rem;
+            color: var(--blue);
+            transition: color .3s
+        }
+
+        .svc:hover .svc-num {
+            color: var(--cyan)
+        }
+
+        .svc:hover .svc-icon {
+            stroke: var(--cyan)
+        }
+
+        .svc-head h3 {
+            font-size: clamp(1.9rem, 1.4rem + 2vw, 3.1rem);
+            font-weight: 500;
+            letter-spacing: -.04em;
+            line-height: 1.02;
+            max-width: 14ch
+        }
+
+        .svc-head p {
+            color: var(--text-2);
+            max-width: 34ch
+        }
+
+        .link-arrow {
+            display: inline-flex;
+            gap: .5rem;
+            align-items: center;
+            width: fit-content;
+            font-size: .9rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--line-strong);
+            padding-bottom: .25rem;
+            transition: border-color .25s, gap .25s var(--ease)
+        }
+
+        .link-arrow:hover {
+            border-color: var(--cyan);
+            gap: .8rem
+        }
+
+        .svc-cols {
+            display: grid;
+            gap: 2rem
+        }
+
+        @media(min-width:760px) {
+            .svc-cols {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .svc-cols .wide {
+                grid-column: 1/-1
+            }
+        }
+
+        @media(min-width:1000px) {
+            .svc {
+                grid-template-columns: .85fr 1.15fr;
+                gap: 4.5rem
+            }
+
+            .svc-head {
+                position: sticky;
+                top: calc(var(--header-h) + 2rem);
+                align-self: start
+            }
+        }
+
+        /* combos */
+        .combos {
+            display: grid;
+            gap: 1.25rem
+        }
+
+        @media(min-width:800px) {
+            .combos {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .combo {
+            padding: 2rem;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--bg);
+            display: grid;
+            gap: 1rem;
+            align-content: start;
+            transition: border-color .35s var(--ease), transform .5s var(--ease)
+        }
+
+        .combo:hover {
+            border-color: var(--line-strong);
+            transform: translateY(-4px)
+        }
+
+        .combo h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: -.025em;
+            line-height: 1.25
+        }
+
+        .combo p {
+            color: var(--text-2);
+            font-size: .94rem
+        }
+
+        .note {
+            padding: .9rem 1.1rem;
+            border: 1px solid rgba(99, 213, 232, .35);
+            background: rgba(99, 213, 232, .05);
+            border-radius: var(--radius);
+            color: var(--text-2);
+            font-size: .88rem;
+            max-width: 64ch;
+            margin-top: 2.5rem
+        }
+
+        .hv-net {
+            fill: none;
+            stroke: rgba(161, 170, 184, .3);
+            stroke-dasharray: 3 5;
+            animation: dash 30s linear infinite
+        }
+    </style>
+    <!-- ADD: <link rel="stylesheet" href="shared/site.css"> -->
+</head>
+
+<body>
+    <!-- PASTE shared/header.html HERE (it includes the skip link + <header>) -->
+
+    <main id="main">
+
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span>Services</p>
+                    <h1>Technology built around the <em>problem.</em></h1>
+                    <p class="lead">Six engineering disciplines in one team. Use one on its own, or combine them so
+                        nothing falls between vendors.</p>
+                    <div class="hero-actions"><a href="#all" class="btn btn-primary">See all services <span
+                                aria-hidden="true">↓</span></a><a href="{% url 'contactus' %}" class="btn btn-ghost">Talk to
+                            us</a></div>
+                </div>
+                <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
+                        <defs>
+                            <radialGradient id="cg">
+                                <stop offset="0" stop-color="#63D5E8" stop-opacity=".5" />
+                                <stop offset="1" stop-color="#638BFF" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                        <circle class="hv-ring" cx="240" cy="240" r="190" />
+                        <circle class="hv-ring dash" cx="240" cy="240" r="215" />
+                        <circle class="hv-core" cx="240" cy="240" r="85" />
+                        <path class="hv-net"
+                            d="M240 240L240 50M240 240L405 145M240 240L405 335M240 240L240 430M240 240L75 335M240 240L75 145" />
+                        <g class="hv-orb">
+                            <circle cx="240" cy="50" r="4" fill="#63D5E8" />
+                        </g>
+                        <g class="hv-orb2">
+                            <circle cx="240" cy="22" r="3" fill="#638BFF" />
+                        </g>
+                        <circle class="hv-node fill" cx="240" cy="240" r="9" />
+                        <circle class="hv-node" cx="240" cy="50" r="7" />
+                        <circle class="hv-node" cx="405" cy="145" r="7" />
+                        <circle class="hv-node" cx="405" cy="335" r="7" />
+                        <circle class="hv-node" cx="240" cy="430" r="7" />
+                        <circle class="hv-node" cx="75" cy="335" r="7" />
+                        <circle class="hv-node" cx="75" cy="145" r="7" />
+                        <text class="hv-lbl" x="252" y="44">PRODUCT</text><text class="hv-lbl" x="368"
+                            y="124">AI</text><text class="hv-lbl" x="368" y="366">CLOUD</text><text class="hv-lbl"
+                            x="252" y="454">SECURITY</text><text class="hv-lbl" x="20" y="366">DATA</text><text
+                            class="hv-lbl" x="6" y="124">CONSULTING</text>
+                    </svg></figure>
+            </div>
+        </section>
+
+        <section class="section" id="overview">
+            <div class="container">
+                <div class="head split">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span>What we do</p>
+                        <h2 class="h2">Six disciplines, one engineering team.</h2>
+                    </div>
+                    <p class="lead">Every business challenge is different. We bring the right capabilities together to
+                        create solutions that are practical, scalable, and built for long-term value.</p>
+                </div>
+                <ul class="grid">
+                    <li><a class="cell" href="#product"><span class="mono">01</span><svg class="icon"
+                                viewBox="0 0 32 32" aria-hidden="true">
+                                <rect x="4" y="6" width="24" height="16" rx="2" />
+                                <path d="M11 28h10M16 22v6" />
+                            </svg>
+                            <h3>Custom Software & Product Engineering</h3>
+                            <p>Web and mobile products, APIs, and business systems built to last.</p><span
+                                class="go">Learn more →</span>
+                        </a></li>
+                    <li><a class="cell" href="#ai"><span class="mono">02</span><svg class="icon" viewBox="0 0 32 32"
+                                aria-hidden="true">
+                                <circle cx="16" cy="16" r="5" />
+                                <path d="M16 3v6M16 23v6M3 16h6M23 16h6M7 7l4 4M21 21l4 4M25 7l-4 4M11 21l-4 4" />
+                            </svg>
+                            <h3>Artificial Intelligence & Automation</h3>
+                            <p>Practical AI and automation, introduced where it genuinely helps.</p><span
+                                class="go">Learn more →</span>
+                        </a></li>
+                    <li><a class="cell" href="#cloud"><span class="mono">03</span><svg class="icon" viewBox="0 0 32 32"
+                                aria-hidden="true">
+                                <path d="M9 22a6 6 0 1 1 1.5-11.8A8 8 0 0 1 26 13a5 5 0 0 1-1 9.9z" />
+                                <path d="M12 26h8M16 22v4" />
+                            </svg>
+                            <h3>Cloud Infrastructure & DevOps</h3>
+                            <p>Infrastructure you can scale, observe, and trust.</p><span class="go">Learn more →</span>
+                        </a></li>
+                    <li><a class="cell" href="#security"><span class="mono">04</span><svg class="icon"
+                                viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7z" />
+                                <path d="M12 16l3 3 5-6" />
+                            </svg>
+                            <h3>Cybersecurity</h3>
+                            <p>Security built into how software is made and run.</p><span class="go">Learn more →</span>
+                        </a></li>
+                    <li><a class="cell" href="#data"><span class="mono">05</span><svg class="icon" viewBox="0 0 32 32"
+                                aria-hidden="true">
+                                <ellipse cx="16" cy="7" rx="10" ry="3.5" />
+                                <path
+                                    d="M6 7v18c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5V7M6 16c0 2 4.5 3.5 10 3.5S26 18 26 16" />
+                            </svg>
+                            <h3>Data Engineering & Analytics</h3>
+                            <p>Turn scattered data into reporting you can rely on.</p><span class="go">Learn more
+                                →</span>
+                        </a></li>
+                    <li><a class="cell" href="#consulting"><span class="mono">06</span><svg class="icon"
+                                viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M4 26h24M7 26V14l9-8 9 8v12" />
+                                <path d="M13 26v-7h6v7" />
+                            </svg>
+                            <h3>Technology Consulting & Modernization</h3>
+                            <p>Clear technical direction, and a safe path off legacy systems.</p><span class="go">Learn
+                                more →</span>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section alt" id="all">
+            <div class="container">
+                <div class="head">
+                    <p class="eyebrow"><span class="eyebrow-line"></span>In detail</p>
+                    <h2 class="h2">What each service covers.</h2>
+                </div>
+                <div class="svc-list">
+                    <article class="svc" id="product">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">01</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <rect x="4" y="6" width="24" height="16" rx="2" />
+                                    <path d="M11 28h10M16 22v6" />
+                                </svg></div>
+                            <h3>Custom Software & Product Engineering</h3>
+                            <p>Web and mobile products, APIs, and business systems built to last.</p><a
+                                class="link-arrow" href="{% url 'contactus' %}">Discuss this service <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>Web applications</li>
+                                    <li>Mobile applications</li>
+                                    <li>E-commerce platforms</li>
+                                    <li>APIs and business systems</li>
+                                    <li>Software integrations</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>You have an idea and need to ship it with confidence</li>
+                                    <li>Spreadsheets or manual steps need a real system</li>
+                                    <li>Your tools do not talk to each other</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>Product architecture</li>
+                                    <li>Application development</li>
+                                    <li>Integrations</li>
+                                    <li>Testing</li>
+                                    <li>Deployment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="svc" id="ai">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">02</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <circle cx="16" cy="16" r="5" />
+                                    <path d="M16 3v6M16 23v6M3 16h6M23 16h6M7 7l4 4M21 21l4 4M25 7l-4 4M11 21l-4 4" />
+                                </svg></div>
+                            <h3>Artificial Intelligence & Automation</h3>
+                            <p>Practical AI and automation, introduced where it genuinely helps.</p><a
+                                class="link-arrow" href="{% url 'contactus' %}">Discuss this service <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>AI integrations</li>
+                                    <li>Knowledge assistants</li>
+                                    <li>Intelligent workflows</li>
+                                    <li>Document processing</li>
+                                    <li>Business process automation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>Teams spend hours on work a system could handle</li>
+                                    <li>Knowledge is scattered across documents and inboxes</li>
+                                    <li>You want AI that answers from sources you approve</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>LLMs</li>
+                                    <li>Vector search</li>
+                                    <li>Python</li>
+                                    <li>Workflow automation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="svc" id="cloud">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">03</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M9 22a6 6 0 1 1 1.5-11.8A8 8 0 0 1 26 13a5 5 0 0 1-1 9.9z" />
+                                    <path d="M12 26h8M16 22v4" />
+                                </svg></div>
+                            <h3>Cloud Infrastructure & DevOps</h3>
+                            <p>Infrastructure you can scale, observe, and trust.</p><a class="link-arrow"
+                                href="{% url 'contactus' %}">Discuss this service <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>Cloud architecture</li>
+                                    <li>AWS infrastructure</li>
+                                    <li>Deployment automation</li>
+                                    <li>Observability</li>
+                                    <li>Scalability and reliability engineering</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>Deployments are manual and risky</li>
+                                    <li>Growth is putting pressure on your platform</li>
+                                    <li>You cannot see how your systems behave</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>AWS</li>
+                                    <li>Terraform</li>
+                                    <li>Kubernetes</li>
+                                    <li>CI/CD</li>
+                                    <li>Monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="svc" id="security">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">04</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7z" />
+                                    <path d="M12 16l3 3 5-6" />
+                                </svg></div>
+                            <h3>Cybersecurity</h3>
+                            <p>Security built into how software is made and run.</p><a class="link-arrow"
+                                href="{% url 'contactus' %}">Discuss this service <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>Secure application development</li>
+                                    <li>Security assessments</li>
+                                    <li>Vulnerability management</li>
+                                    <li>Identity controls</li>
+                                    <li>Risk reduction</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>You are about to launch something new</li>
+                                    <li>Customers or partners ask about your security</li>
+                                    <li>You want fewer surprises in production</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>Secure development</li>
+                                    <li>Assessments</li>
+                                    <li>Access control</li>
+                                    <li>Vulnerability management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="svc" id="data">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">05</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <ellipse cx="16" cy="7" rx="10" ry="3.5" />
+                                    <path
+                                        d="M6 7v18c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5V7M6 16c0 2 4.5 3.5 10 3.5S26 18 26 16" />
+                                </svg></div>
+                            <h3>Data Engineering & Analytics</h3>
+                            <p>Turn scattered data into reporting you can rely on.</p><a class="link-arrow"
+                                href="{% url 'contactus' %}">Discuss this service <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>Data pipelines</li>
+                                    <li>System integrations</li>
+                                    <li>Analytics platforms</li>
+                                    <li>Reporting dashboards</li>
+                                    <li>Business intelligence</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>Your data lives in too many places to be useful</li>
+                                    <li>Reports are built by hand each month</li>
+                                    <li>Decisions wait on someone exporting a spreadsheet</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>Pipelines</li>
+                                    <li>Dashboards</li>
+                                    <li>BI</li>
+                                    <li>Reporting</li>
+                                    <li>Integrations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="svc" id="consulting">
+                        <div class="svc-head">
+                            <div class="svc-top"><span class="svc-num">06</span><svg class="svc-icon"
+                                    viewBox="0 0 32 32" aria-hidden="true">
+                                    <path d="M4 26h24M7 26V14l9-8 9 8v12" />
+                                    <path d="M13 26v-7h6v7" />
+                                </svg></div>
+                            <h3>Technology Consulting & Modernization</h3>
+                            <p>Clear technical direction, and a safe path off legacy systems.</p><a class="link-arrow"
+                                href="{% url 'contactus' %}">Discuss this service <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="svc-cols">
+                            <div>
+                                <h4 class="col-h">What is included</h4>
+                                <ul class="dlist">
+                                    <li>Technical strategy</li>
+                                    <li>Legacy modernization</li>
+                                    <li>Software architecture</li>
+                                    <li>System integrations</li>
+                                    <li>Performance improvements</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="col-h">A good fit when</h4>
+                                <ul class="dlist">
+                                    <li>Critical software is holding the business back</li>
+                                    <li>You face a build, buy, or rewrite decision</li>
+                                    <li>You want an independent architecture review</li>
+                                </ul>
+                            </div>
+                            <div class="wide">
+                                <h4 class="col-h">Focus areas</h4>
+                                <ul class="chips">
+                                    <li>Architecture review</li>
+                                    <li>Incremental migration</li>
+                                    <li>Roadmapping</li>
+                                    <li>Performance tuning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="together">
+            <div class="container">
+                <div class="head split">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span>Better together</p>
+                        <h2 class="h2">Start with the challenge, not the service.</h2>
+                    </div>
+                    <p class="lead">Most real problems need more than one discipline. These are common combinations.</p>
+                </div>
+                <div class="combos">
+                    <article class="combo"><span class="mono">COMBO.01</span>
+                        <h3>Launching a digital product</h3>
+                        <p>Build it, host it, and secure it as one effort.</p>
+                        <ul class="chips">
+                            <li>Product Engineering</li>
+                            <li>Cloud & DevOps</li>
+                            <li>Cybersecurity</li>
+                        </ul>
+                    </article>
+                    <article class="combo"><span class="mono">COMBO.02</span>
+                        <h3>Automating repetitive work</h3>
+                        <p>Connect the right AI and workflow tools to the data they need.</p>
+                        <ul class="chips">
+                            <li>AI & Automation</li>
+                            <li>Data & Analytics</li>
+                            <li>Product Engineering</li>
+                        </ul>
+                    </article>
+                    <article class="combo"><span class="mono">COMBO.03</span>
+                        <h3>Scaling an existing platform</h3>
+                        <p>Improve performance, visibility, and reliability together.</p>
+                        <ul class="chips">
+                            <li>Cloud & DevOps</li>
+                            <li>Data & Analytics</li>
+                            <li>Consulting</li>
+                        </ul>
+                    </article>
+                    <article class="combo"><span class="mono">COMBO.04</span>
+                        <h3>Modernizing legacy software</h3>
+                        <p>Plan the path, then migrate in safe increments.</p>
+                        <ul class="chips">
+                            <li>Consulting</li>
+                            <li>Product Engineering</li>
+                            <li>Cloud & DevOps</li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="note">Not sure what you need? Describe the situation and we will suggest where to start. See
+                    <a href="{% url 'ourapproach' %}" style="border-bottom:1px solid var(--line-strong)">how we work</a> for
+                    what happens next.</p>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
+                    <h2>Which service fits your challenge?</h2>
+                </div>
+                <div class="hero-actions"><a href="{% url 'contactus' %}" class="btn btn-primary">Start a conversation <span
+                            aria-hidden="true">→</span></a><a href="{% url 'industry' %}" class="btn btn-ghost">Browse
+                        industries</a></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PASTE shared/footer.html HERE -->
+    <script>
+        (function () {
+            "use strict";
+            document.documentElement.classList.add("js");
+            const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const SEL = ".hero .container>div>*,.hero-visual,.head>*,.cell,.svc,.combo,.note,.cta .container>*";
+            document.querySelectorAll(SEL).forEach(el => {
+                el.classList.add("reveal");
+                const sibs = [...el.parentElement.children].filter(c => c.matches(SEL));
+                el.style.setProperty("--d", Math.min(sibs.indexOf(el), 6) * .08 + "s")
+            });
+            const rv = document.querySelectorAll(".reveal");
+            if (!reduce && "IntersectionObserver" in window) {
+                const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target) } }), { rootMargin: "0px 0px -8% 0px", threshold: .06 });
+                rv.forEach(el => io.observe(el));
+            } else rv.forEach(el => el.classList.add("is-visible"));
+
+        })();
+    </script>
+    <!-- ADD: <script src="shared/site.js" defer></script> -->
+</body>
+
+</html>

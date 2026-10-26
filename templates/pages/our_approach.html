@@ -27,7 +27,7 @@
           <p class="lead">Four stages, one team, no surprises. Here is how we take an idea from first conversation to a
             system that keeps improving.</p>
           <div class="hero-actions"><a href="#phases" class="btn btn-primary">See the four stages <span
-                aria-hidden="true">↓</span></a><a href="contact.html" class="btn btn-ghost">Talk to us</a></div>
+                aria-hidden="true">↓</span></a><a href="{% url 'contactus' %}" class="btn btn-ghost">Talk to us</a></div>
         </div>
         <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
             <defs>
@@ -310,8 +310,8 @@
           <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
           <h2>Ready to start with the problem?</h2>
         </div>
-        <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Start a conversation <span
-              aria-hidden="true">→</span></a><a href="industries.html" class="btn btn-ghost">See industries</a></div>
+        <div class="hero-actions"><a href="{% url 'contactus' %}" class="btn btn-primary">Start a conversation <span
+              aria-hidden="true">→</span></a><a href="{% url 'industry' %}" class="btn btn-ghost">See industries</a></div>
       </div>
     </section>
   </main>

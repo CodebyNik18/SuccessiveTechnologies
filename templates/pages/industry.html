@@ -28,7 +28,7 @@
           <p class="lead">Every sector has its own constraints, users, and risks. We start by learning yours, then bring
             the right engineering to bear.</p>
           <div class="hero-actions"><a href="#sectors" class="btn btn-primary">Explore sectors <span
-                aria-hidden="true">↓</span></a><a href="contact.html" class="btn btn-ghost">Talk to us</a></div>
+                aria-hidden="true">↓</span></a><a href="{% url 'contactus' %}" class="btn btn-ghost">Talk to us</a></div>
         </div>
         <figure class="hero-visual"><svg viewBox="0 0 480 480" aria-hidden="true">
             <defs>
@@ -333,8 +333,8 @@
           <p class="eyebrow"><span class="eyebrow-line"></span>Next step</p>
           <h2>Tell us about your industry.</h2>
         </div>
-        <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Start a conversation <span
-              aria-hidden="true">→</span></a><a href="our-approach.html" class="btn btn-ghost">See our approach</a>
+        <div class="hero-actions"><a href="{% url 'contactus' %}" class="btn btn-primary">Start a conversation <span
+              aria-hidden="true">→</span></a><a href="{% url 'ourapproach' %}" class="btn btn-ghost">See our approach</a>
         </div>
       </div>
     </section>

@@ -586,8 +586,8 @@
                         the problem and exploring the right technical approach.</p>
                 </div>
 
-                <form class="contact-form reveal" action="#" method="post" novalidate data-contact-form>
-                    <p class="form-note mono">Demo form — real submission requires backend integration.</p>
+                <form class="contact-form reveal" action="{% url 'home' %}" method="POST">
+                    {% csrf_token %}
                     <div class="field">
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text" autocomplete="name" required>

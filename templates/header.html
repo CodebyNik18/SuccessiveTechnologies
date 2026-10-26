@@ -3,7 +3,7 @@
 
 <header class="site-header" data-header>
     <div class="container header-inner">
-        <a href="index.html" class="wordmark" aria-label="SuccessiveTechnologies home">
+        <a href="{% url 'home' %}" class="wordmark" aria-label="SuccessiveTechnologies home">
             <span>SuccessiveTechnologies</span>
         </a>
 
@@ -21,35 +21,35 @@
                         <div class="mega-intro">
                             <p class="eyebrow">Capabilities</p>
                             <p class="mega-lead">Six disciplines, one engineering team.</p>
-                            <a href="index.html#services" class="link-arrow">All services <span
+                            <a href="{% url 'allservices' %}" class="link-arrow">All services <span
                                     aria-hidden="true">→</span></a>
                         </div>
                         <ul class="mega-list">
-                            <li><a href="index.html#services"><span class="mono">01</span>Custom Software &amp; Product
+                            <li><a href="{% url 'allservices' %}"><span class="mono">01</span>Custom Software &amp; Product
                                     Engineering</a></li>
-                            <li><a href="index.html#services"><span class="mono">02</span>Artificial Intelligence &amp;
+                            <li><a href="{% url 'allservices' %}"><span class="mono">02</span>Artificial Intelligence &amp;
                                     Automation</a></li>
-                            <li><a href="index.html#services"><span class="mono">03</span>Cloud Infrastructure &amp;
+                            <li><a href="{% url 'allservices' %}"><span class="mono">03</span>Cloud Infrastructure &amp;
                                     DevOps</a></li>
-                            <li><a href="index.html#services"><span class="mono">04</span>Cybersecurity</a></li>
-                            <li><a href="index.html#services"><span class="mono">05</span>Data Engineering &amp;
+                            <li><a href="{% url 'allservices' %}"><span class="mono">04</span>Cybersecurity</a></li>
+                            <li><a href="{% url 'allservices' %}"><span class="mono">05</span>Data Engineering &amp;
                                     Analytics</a></li>
-                            <li><a href="index.html#services"><span class="mono">06</span>Technology Consulting &amp;
+                            <li><a href="{% url 'allservices' %}"><span class="mono">06</span>Technology Consulting &amp;
                                     Modernization</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="index.html#industries">Industries</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#approach">Our Approach</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#insights">Insights</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item nav-cta-mobile"><a class="btn btn-primary" href="contact.html">Start a Project</a>
+                <li class="nav-item"><a class="nav-link" href="{% url 'industry' %}">Industries</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'ourapproach' %}">Our Approach</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'insight' %}">Insights</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'aboutus' %}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contactus' %}">Contact</a></li>
+                <li class="nav-item nav-cta-mobile"><a class="btn btn-primary" href="{% url 'contactus' %}">Start a Project</a>
                 </li>
             </ul>
         </nav>
 
-        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Start a Project</a>
+        <a class="btn btn-primary btn-sm header-cta" href="{% url 'contactus' %}">Start a Project</a>
         <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"
             data-menu-toggle>
             <span></span><span></span>
