@@ -31,13 +31,12 @@
     <section class="contact-main">
       <div class="container contact-grid">
 
-        <form class="contact-form" id="form" action="#" method="post" novalidate data-contact-form>
+        <form class="contact-form" id="form" action="{% url 'contactus' %}" method="POST">
+          {% csrf_token %}
           <div class="form-head">
             <h2>Start a conversation</h2>
             <p>Fields marked optional can be skipped. The more context you give, the more useful our first reply will
               be.</p>
-            <p class="form-note mono" style="margin-top:.8rem">Demo form — connect a backend to enable real submissions.
-            </p>
           </div>
 
           <div class="row two">
@@ -113,9 +112,6 @@
               placeholder="The problem, who it affects, and what you've tried so far."></textarea>
             <span class="error" aria-live="polite"></span>
           </div>
-
-          <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1"
-                autocomplete="off"></label></div>
 
           <div class="form-foot">
             <button type="submit" class="btn btn-primary">Send message <span aria-hidden="true">→</span></button>

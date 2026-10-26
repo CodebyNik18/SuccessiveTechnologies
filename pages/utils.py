@@ -1,4 +1,25 @@
-html_message = f"""
+import os
+from dotenv import load_dotenv
+from brevo import Brevo
+from brevo.transactional_emails import (
+    SendTransacEmailRequestSender,
+    SendTransacEmailRequestToItem
+)
+
+load_dotenv()
+
+def send_contact_email(
+  name: str,
+  service: list,
+  email: str,
+  company: str,
+  phone: str,
+  timeline: str,
+  budget: str,
+  message: str
+) -> str:
+    services = ', '.join(serv for serv in service)
+    html_message = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,21 +67,21 @@ html_message = f"""
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-size:14px;">
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;width:36%;">Full name</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{name}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{name}</td>
                 </tr>
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;">Work email</td>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;overflow-wrap:anywhere;">
-                    <a href="mailto:{{email}}" style="color:#60a5fa;text-decoration:none;">{{email}}</a>
+                    <a href="mailto:{email}" style="color:#60a5fa;text-decoration:none;">{email}</a>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;">Company</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{company}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{company}</td>
                 </tr>
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;">Phone</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{phone}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{phone}</td>
                 </tr>
               </table>
 
@@ -71,15 +92,15 @@ html_message = f"""
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-size:14px;">
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;width:36%;">Service required</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{service}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{services}</td>
                 </tr>
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;">Timeline</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{timeline}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{timeline}</td>
                 </tr>
                 <tr>
                   <td style="padding:13px 0;border-bottom:1px solid #273449;color:#94a3b8;">Budget range</td>
-                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{{budget}}</td>
+                  <td style="padding:13px 0;border-bottom:1px solid #273449;color:#f3f4f6;">{budget}</td>
                 </tr>
               </table>
 
@@ -87,12 +108,12 @@ html_message = f"""
                 03 / Project Description
               </p>
 
-              <div style="padding:20px;background:#080b11;border:1px solid #273449;color:#d1d5db;font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;">{{message}}</div>
+              <div style="padding:20px;background:#080b11;border:1px solid #273449;color:#d1d5db;font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;">{message}</div>
 
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-top:28px;">
                 <tr>
                   <td style="background:#f3f4f6;">
-                    <a href="mailto:{{email}}?subject=Re%3A%20Your%20Project%20Inquiry" style="display:inline-block;padding:14px 21px;color:#080b11;font-size:13px;font-weight:bold;text-decoration:none;">
+                    <a href="mailto:{email}?subject=Re%3A%20Your%20Project%20Inquiry" style="display:inline-block;padding:14px 21px;color:#080b11;font-size:13px;font-weight:bold;text-decoration:none;">
                       Reply to Client &rarr;
                     </a>
                   </td>
@@ -123,3 +144,18 @@ html_message = f"""
 </body>
 </html>
 """
+    client = Brevo(api_key=os.getenv('BREVO_API_KEY'))
+
+    result = client.transactional_emails.send_transac_email(
+        subject=f"New Website Inquiry — {name}",
+        html_content=html_message,
+        sender=SendTransacEmailRequestSender(
+                email="ashumanager77@gmail.com",
+            ),
+            to=[
+                SendTransacEmailRequestToItem(
+                    email="ashumanager77@gmail.com",
+                    name="Ashu",
+                )
+            ],
+    )
